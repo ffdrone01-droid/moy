@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HTML LAB — Link &amp; Image (Modern Web Learning &amp; Demonstration)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f8fafc",
+            "surface-container-low": "#f1f5f9",
+            "surface-container": "#e2e8f0",
+            "surface-container-high": "#cbd5e1",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#334155",
+            "primary": "#0284c7",
+            "primary-container": "#0369a1",
+            "primary-fixed": "#e0f2fe",
+            "primary-fixed-dim": "#bae6fd",
+            "on-primary": "#ffffff",
+            "secondary": "#2563eb",
+            "secondary-container": "#dbeafe",
+            "outline": "#64748b",
+            "outline-variant": "#cbd5e1",
+            "inverse-surface": "#0f172a",
+            "inverse-on-surface": "#f8fafc",
+            "error": "#dc2626",
+            "error-container": "#fee2e2"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .slide-section {
+      scroll-margin-top: 5rem;
+    }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary selection:text-white">
+<!-- 1. NAVBAR (High-contrast for projector / classroom presentation) -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-surface-container shadow-sm">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-6">
+<!-- Logo: HTML LAB -->
+<a class="flex items-center gap-3 group focus:outline-none" href="#hero">
+<div class="flex items-center justify-center px-3 py-1.5 bg-primary text-white rounded-lg font-mono font-bold text-base shadow-sm">
+          &lt; /&gt;
+        </div>
+<span class="text-2xl font-extrabold tracking-tight text-on-surface">
+          HTML <span class="text-primary">LAB</span>
+</span>
+</a>
+<!-- Menu Navigasi: Home, HTML Basics, Link & Image (aktif), Examples -->
+<nav class="hidden md:flex items-center gap-2 bg-surface-container-low p-1.5 rounded-xl border border-surface-container">
+<a class="px-4 py-2 rounded-lg text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-white transition-colors" href="#hero">Home</a>
+<a class="px-4 py-2 rounded-lg text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-white transition-colors" href="#learn">HTML Basics</a>
+<a aria-current="page" class="px-4 py-2 rounded-lg text-sm font-bold bg-white text-primary shadow-sm border border-slate-200/80" href="#sec-01">Link &amp; Image</a>
+<a class="px-4 py-2 rounded-lg text-sm font-semibold text-on-surface-variant hover:text-on-surface hover:bg-white transition-colors" href="#practice">Examples</a>
+</nav>
+<!-- Sisi Kanan: Badge HTML FUNDAMENTALS -->
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-primary font-mono text-xs md:text-sm font-bold tracking-wider border border-primary-fixed-dim">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          HTML FUNDAMENTALS
+        </span>
+</div>
+</div>
+</header>
+<!-- MAIN CONTENT CONTAINER -->
+<main class="w-full pt-20 flex-grow">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col gap-20">
+<!-- 2. HERO SECTION -->
+<section class="slide-section relative bg-white border border-slate-200/90 rounded-3xl p-8 lg:p-14 shadow-lg overflow-hidden" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+<!-- Left Hero Content -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="px-4 py-1.5 bg-slate-900 text-white rounded-full font-mono text-xs font-bold tracking-widest uppercase shadow-sm">
+                HTML FUNDAMENTALS
+              </span>
+<span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-lg font-mono text-xs font-semibold">
+                Lesson &amp; Demonstration
+              </span>
+</div>
+<div class="flex flex-col gap-3">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                Link &amp; Image
+              </h1>
+<p class="text-xl sm:text-2xl font-semibold text-primary leading-snug">
+                Memahami cara menghubungkan halaman dan menampilkan gambar menggunakan HTML.
+              </p>
+<p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mt-1">
+                HTML menyediakan elemen dasar untuk membangun struktur halaman web. Pada materi ini kita akan mempelajari cara membuat link dan menampilkan gambar.
+              </p>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary hover:bg-primary-container text-white font-bold text-base rounded-xl transition-all shadow-md hover:shadow-lg focus:ring-4 focus:ring-sky-200" href="#sec-01">
+<span>Pelajari Link</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-7 py-3.5 bg-surface-container-low hover:bg-surface-container text-slate-800 font-bold text-base rounded-xl transition-all border border-slate-300" href="#practice">
+<span class="material-symbols-outlined text-lg text-primary">play_circle</span>
+<span>Lihat Contoh</span>
+</a>
+</div>
+</div>
+<!-- Right Hero Mockup: Kode HTML & Preview berdampingan -->
+<div class="lg:col-span-5 bg-slate-900 rounded-2xl shadow-2xl border border-slate-800 overflow-hidden text-slate-100">
+<!-- Browser Header -->
+<div class="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded-full bg-rose-500 inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-amber-500 inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block"></span>
+<span class="font-mono text-xs text-slate-400 ml-2">preview-demo.html</span>
+</div>
+<span class="px-2.5 py-0.5 bg-sky-950 text-sky-400 font-mono text-xs rounded border border-sky-800 font-bold">HTML5</span>
+</div>
+<!-- Side-by-side or stacked preview mockup -->
+<div class="p-6 flex flex-col gap-5">
+<!-- Code view -->
+<div class="bg-slate-950/90 rounded-xl p-4 font-mono text-sm leading-relaxed border border-slate-800 text-slate-300 overflow-x-auto">
+<div class="text-xs text-slate-500 mb-2 font-bold uppercase tracking-wider">// HTML Source</div>
+<div><span class="text-rose-400">&lt;a</span> <span class="text-sky-300">href</span>=<span class="text-emerald-300">"https://example.com"</span><span class="text-rose-400">&gt;</span>Visit Website<span class="text-rose-400">&lt;/a&gt;</span></div>
+<div class="mt-2"><span class="text-rose-400">&lt;img</span> <span class="text-sky-300">src</span>=<span class="text-emerald-300">"image.jpg"</span> <span class="text-sky-300">alt</span>=<span class="text-emerald-300">"Example Image"</span><span class="text-rose-400">&gt;</span></div>
+</div>
+<!-- Live Render Box -->
+<div class="bg-white rounded-xl p-5 text-slate-900 border border-slate-300 shadow-inner flex flex-col gap-3">
+<div class="flex items-center justify-between text-xs font-mono text-slate-500 pb-2 border-b border-slate-200">
+<span class="flex items-center gap-1 font-semibold text-slate-700">
+<span class="material-symbols-outlined text-sm text-emerald-600">visibility</span> BROWSER RENDER
+                  </span>
+<span class="text-emerald-600 font-bold">Live Output</span>
+</div>
+<!-- Rendered Link -->
+<div class="text-left">
+<a class="inline-flex items-center gap-1.5 text-primary hover:underline font-bold text-base" href="https://example.com" rel="noopener noreferrer" target="_blank">
+<span>Visit Website</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Rendered Mock Image -->
+<div class="relative w-full h-32 rounded-lg overflow-hidden border border-slate-200 bg-slate-100 flex items-center justify-center">
+<img alt="Example Image" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwVFePj3EJ1UgiKssTlPj4d8T0je8qb3PnCQ8WXWqK1MjDjyiR5AY2-VG7aOJWYob_8BoV4SltTpHgw9YQU5T7Z8fJBWOiC-be7ov3EOItwLms7NSKHc8hb5In8BahUX_n_um8IKan3NoEio7d6mvmJC3hQ_lRbnMQtlvdPmN3kqpd9J_LMsIEwOjIaAJGt86cvM_7ncI8CRdm1cym4OrVD_J_0WOW-SQTkVitSTtzUV2h4bifFmac"/>
+<span class="absolute bottom-1.5 left-2 bg-slate-900/80 text-white font-mono text-[11px] px-2 py-0.5 rounded">alt: Example Image</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECTION — APA YANG AKAN KITA PELAJARI? -->
+<section class="slide-section flex flex-col gap-8 bg-slate-100/80 p-8 lg:p-12 rounded-3xl border border-slate-200" id="learn">
+<div class="flex flex-col gap-2 text-center max-w-3xl mx-auto">
+<span class="font-mono text-xs font-bold uppercase tracking-widest text-primary">Outline Presentasi</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Apa yang Akan Kita Pelajari?
+          </h2>
+<p class="text-slate-600 text-base sm:text-lg">
+            Empat pilar pokok untuk memahami tautan web dan media visual secara menyeluruh.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Kartu 01 -->
+<div class="bg-white rounded-2xl p-6 border-2 border-slate-200/90 shadow-sm hover:border-primary transition-all flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-sky-100 text-primary flex items-center justify-center font-mono font-bold text-xl">
+              01
+            </div>
+<h3 class="text-xl font-bold text-slate-900">HTML Link</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+              Membuat tautan ke halaman atau website lain.
+            </p>
+<div class="mt-auto pt-2">
+<span class="font-mono text-xs bg-slate-100 text-primary font-bold px-2 py-1 rounded">&lt;a&gt;</span>
+</div>
+</div>
+<!-- Kartu 02 -->
+<div class="bg-white rounded-2xl p-6 border-2 border-slate-200/90 shadow-sm hover:border-primary transition-all flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-blue-100 text-secondary flex items-center justify-center font-mono font-bold text-xl">
+              02
+            </div>
+<h3 class="text-xl font-bold text-slate-900">href</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+              Menentukan alamat tujuan link.
+            </p>
+<div class="mt-auto pt-2">
+<span class="font-mono text-xs bg-slate-100 text-secondary font-bold px-2 py-1 rounded">href="..."</span>
+</div>
+</div>
+<!-- Kartu 03 -->
+<div class="bg-white rounded-2xl p-6 border-2 border-slate-200/90 shadow-sm hover:border-primary transition-all flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-mono font-bold text-xl">
+              03
+            </div>
+<h3 class="text-xl font-bold text-slate-900">HTML Image</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+              Menampilkan gambar pada halaman web.
+            </p>
+<div class="mt-auto pt-2">
+<span class="font-mono text-xs bg-slate-100 text-emerald-700 font-bold px-2 py-1 rounded">&lt;img&gt;</span>
+</div>
+</div>
+<!-- Kartu 04 -->
+<div class="bg-white rounded-2xl p-6 border-2 border-slate-200/90 shadow-sm hover:border-primary transition-all flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-mono font-bold text-xl">
+              04
+            </div>
+<h3 class="text-xl font-bold text-slate-900">src &amp; alt</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+              Menentukan sumber dan deskripsi gambar.
+            </p>
+<div class="mt-auto pt-2">
+<span class="font-mono text-xs bg-slate-100 text-purple-700 font-bold px-2 py-1 rounded">src &amp; alt</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECTION — 01 HTML LINK -->
+<section class="slide-section bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-md flex flex-col gap-8" id="sec-01">
+<!-- Header Bagian -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+<div class="flex items-center gap-4">
+<span class="px-3.5 py-1 bg-primary text-white font-mono text-lg font-extrabold rounded-xl">01</span>
+<div>
+<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">01 — HTML Link</h2>
+<p class="text-base text-slate-600 mt-1">
+                Tag <code class="font-mono text-primary font-bold bg-sky-50 px-1.5 py-0.5 rounded">&lt;a&gt;</code> digunakan untuk membuat hyperlink yang dapat diklik oleh pengguna.
+              </p>
+</div>
+</div>
+<span class="self-start sm:self-center px-4 py-1.5 bg-slate-100 text-slate-700 font-mono text-xs font-bold rounded-full uppercase tracking-wider">
+            Anchor Tag
+          </span>
+</div>
+<!-- Layout 2 Kolom: Kiri Code Example, Kanan Browser Preview Nyata -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Kiri: Code Example -->
+<div class="lg:col-span-6 bg-slate-900 rounded-2xl overflow-hidden shadow-md flex flex-col border border-slate-800">
+<div class="bg-slate-950 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+<span class="font-mono text-xs text-sky-400 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">code</span> link-example.html
+              </span>
+<span class="text-xs text-slate-400 font-mono">Kode Sumber</span>
+</div>
+<div class="p-6 font-mono text-sm leading-relaxed text-slate-200 flex-1 flex flex-col justify-center">
+<div><span class="text-rose-400">&lt;a</span> <span class="text-sky-300">href</span>=<span class="text-emerald-300">"https://example.com"</span><span class="text-rose-400">&gt;</span></div>
+<div class="pl-6 text-white font-bold">Visit Website</div>
+<div><span class="text-rose-400">&lt;/a&gt;</span></div>
+</div>
+</div>
+<!-- Kanan: Browser Preview nyata -->
+<div class="lg:col-span-6 bg-slate-50 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md flex flex-col">
+<!-- Browser Address Bar -->
+<div class="bg-slate-200/80 px-4 py-3 flex items-center gap-3 border-b border-slate-300">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+</div>
+<div class="bg-white px-3 py-1 rounded-md text-xs font-mono text-slate-600 flex-1 truncate flex items-center gap-1.5 border border-slate-300/80">
+<span class="material-symbols-outlined text-sm text-emerald-600">lock</span> https://example-site.com
+              </div>
+</div>
+<!-- Browser Canvas -->
+<div class="p-8 bg-white flex-1 flex flex-col items-center justify-center gap-4 text-center">
+<p class="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">Tampilan Nyata di Browser:</p>
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-sky-50 text-primary border-2 border-primary/30 hover:border-primary hover:bg-primary hover:text-white font-bold text-lg rounded-xl transition-all shadow-sm group" href="https://example.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">open_in_new</span>
+<span>Visit Website</span>
+</a>
+<p class="text-xs text-slate-500">Tautan ini dapat diklik langsung oleh pengguna.</p>
+</div>
+</div>
+</div>
+<!-- Bagian Kode (Breakdown) -->
+<div class="flex flex-col gap-4 pt-2">
+<h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">segment</span> Bagian Kode
+          </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5">
+<span class="font-mono text-base font-bold text-primary">&lt;a&gt;</span>
+<p class="text-sm text-slate-700 font-medium">Tag untuk membuat hyperlink.</p>
+</div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5">
+<span class="font-mono text-base font-bold text-blue-600">href</span>
+<p class="text-sm text-slate-700 font-medium">Alamat tujuan hyperlink.</p>
+</div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5">
+<span class="font-mono text-base font-bold text-slate-900">Visit Website</span>
+<p class="text-sm text-slate-700 font-medium">Teks yang ditampilkan kepada pengguna.</p>
+</div>
+</div>
+</div>
+<!-- Contoh Kedua: Link Internal -->
+<div class="bg-sky-50/70 border border-sky-200 rounded-2xl p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs font-bold uppercase tracking-wider text-sky-800">Contoh Tambahan — Internal Link</span>
+<span class="text-xs text-sky-700 font-semibold bg-white px-2.5 py-0.5 rounded border border-sky-200">Satu Folder</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-7 flex flex-col gap-2">
+<div class="bg-slate-900 text-slate-100 font-mono text-sm p-4 rounded-xl">
+<span class="text-rose-400">&lt;a</span> <span class="text-sky-300">href</span>=<span class="text-emerald-300">"about.html"</span><span class="text-rose-400">&gt;</span>Tentang Kami<span class="text-rose-400">&lt;/a&gt;</span>
+</div>
+<p class="text-sm text-slate-700 leading-relaxed font-medium">
+                Link internal digunakan untuk berpindah ke halaman lain dalam website yang sama.
+              </p>
+</div>
+<div class="md:col-span-5 bg-white p-4 rounded-xl border border-sky-200 shadow-sm flex flex-col gap-2">
+<span class="text-xs font-mono uppercase text-slate-400 font-bold">Simulasi Navigasi Halaman</span>
+<div class="flex items-center gap-2 font-mono text-xs font-semibold">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded border">index.html</span>
+<span class="material-symbols-outlined text-sm text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-sky-100 text-sky-800 rounded border border-sky-300">about.html</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECTION — 02 HTML IMAGE -->
+<section class="slide-section bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-md flex flex-col gap-8" id="sec-02">
+<!-- Header Bagian -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+<div class="flex items-center gap-4">
+<span class="px-3.5 py-1 bg-primary text-white font-mono text-lg font-extrabold rounded-xl">02</span>
+<div>
+<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">02 — HTML Image</h2>
+<p class="text-base text-slate-600 mt-1">
+                Tag <code class="font-mono text-primary font-bold bg-sky-50 px-1.5 py-0.5 rounded">&lt;img&gt;</code> digunakan untuk menampilkan gambar pada halaman web.
+              </p>
+</div>
+</div>
+<span class="self-start sm:self-center px-4 py-1.5 bg-slate-100 text-slate-700 font-mono text-xs font-bold rounded-full uppercase tracking-wider">
+            Self-Closing Tag
+          </span>
+</div>
+<!-- Layout 2 Kolom: Kiri Code, Kanan Landscape Display yang tajam -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Kiri: Code -->
+<div class="lg:col-span-6 bg-slate-900 rounded-2xl overflow-hidden shadow-md flex flex-col border border-slate-800">
+<div class="bg-slate-950 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+<span class="font-mono text-xs text-sky-400 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">image</span> image-syntax.html
+              </span>
+<span class="text-xs text-slate-400 font-mono">HTML Tag</span>
+</div>
+<div class="p-6 font-mono text-sm leading-relaxed text-slate-200 flex-1 flex flex-col justify-center">
+<div><span class="text-rose-400">&lt;img</span></div>
+<div class="pl-6"><span class="text-sky-300">src</span>=<span class="text-emerald-300">"image.jpg"</span></div>
+<div class="pl-6"><span class="text-sky-300">alt</span>=<span class="text-emerald-300">"Pemandangan alam"</span></div>
+<div><span class="text-rose-400">&gt;</span></div>
+</div>
+</div>
+<!-- Kanan: Visual Landscape Image Display yang tajam dengan label caption -->
+<div class="lg:col-span-6 bg-slate-50 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-md flex flex-col">
+<div class="bg-slate-200/80 px-4 py-3 flex items-center justify-between border-b border-slate-300">
+<span class="text-xs font-mono text-slate-700 font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">landscape</span> Render Output Gambar
+              </span>
+<span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-mono font-semibold">200 OK</span>
+</div>
+<div class="p-6 bg-white flex-1 flex flex-col justify-between gap-4">
+<div class="relative w-full h-56 rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+<img alt="Pemandangan alam" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwVFePj3EJ1UgiKssTlPj4d8T0je8qb3PnCQ8WXWqK1MjDjyiR5AY2-VG7aOJWYob_8BoV4SltTpHgw9YQU5T7Z8fJBWOiC-be7ov3EOItwLms7NSKHc8hb5In8BahUX_n_um8IKan3NoEio7d6mvmJC3hQ_lRbnMQtlvdPmN3kqpd9J_LMsIEwOjIaAJGt86cvM_7ncI8CRdm1cym4OrVD_J_0WOW-SQTkVitSTtzUV2h4bifFmac"/>
+<div class="absolute bottom-2 left-2 bg-slate-950/85 backdrop-blur-sm text-white px-3 py-1 rounded-md text-xs font-mono">
+                  src: "image.jpg"
+                </div>
+</div>
+<div class="bg-slate-100 px-3.5 py-2 rounded-lg text-xs font-mono text-slate-700 flex items-center justify-between">
+<span><strong>Caption / Alt:</strong> "Pemandangan alam"</span>
+<span class="text-emerald-700 font-bold flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Valid</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Kode Breakdown: src, alt, dan catatan penting aksesibilitas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col gap-2">
+<span class="font-mono text-base font-bold text-primary">src (source)</span>
+<p class="text-sm text-slate-700 font-medium">
+              Menentukan lokasi atau sumber gambar.
+            </p>
+</div>
+<div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col gap-2">
+<span class="font-mono text-base font-bold text-primary">alt (alternative text)</span>
+<p class="text-sm text-slate-700 font-medium">
+              Memberikan deskripsi alternatif gambar.
+            </p>
+</div>
+</div>
+<!-- Catatan Penting Aksesibilitas -->
+<div class="p-5 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl flex items-start gap-3.5">
+<span class="material-symbols-outlined text-amber-600 text-2xl shrink-0 mt-0.5">accessibility_new</span>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-800">Penting untuk Aksesibilitas</span>
+<p class="text-sm text-slate-800 leading-relaxed font-semibold">
+              Jika gambar tidak dapat dimuat, teks alt dapat membantu menjelaskan isi gambar.
+            </p>
+</div>
+</div>
+</section>
+<!-- 6. SECTION — 03 MENGGABUNGKAN LINK DAN IMAGE -->
+<section class="slide-section bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-md flex flex-col gap-8" id="sec-03">
+<!-- Header Bagian -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+<div class="flex items-center gap-4">
+<span class="px-3.5 py-1 bg-secondary text-white font-mono text-lg font-extrabold rounded-xl">03</span>
+<div>
+<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">03 — Menggabungkan Link dan Image</h2>
+<p class="text-base text-slate-600 mt-1">
+                Gambar juga dapat dijadikan hyperlink dengan menempatkan elemen <code class="font-mono text-primary font-bold bg-sky-50 px-1.5 py-0.5 rounded">&lt;img&gt;</code> di dalam <code class="font-mono text-primary font-bold bg-sky-50 px-1.5 py-0.5 rounded">&lt;a&gt;</code>.
+              </p>
+</div>
+</div>
+<span class="self-start sm:self-center px-4 py-1.5 bg-blue-100 text-secondary font-mono text-xs font-bold rounded-full uppercase tracking-wider">
+            Nested Elements
+          </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Code Block -->
+<div class="lg:col-span-7 bg-slate-900 rounded-2xl overflow-hidden shadow-md border border-slate-800">
+<div class="bg-slate-950 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+<span class="font-mono text-xs text-sky-400 font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">link</span> nested-markup.html
+              </span>
+<span class="text-xs text-slate-400 font-mono">Kode Bersarang</span>
+</div>
+<div class="p-6 font-mono text-sm leading-relaxed text-slate-200">
+<div><span class="text-rose-400">&lt;a</span> <span class="text-sky-300">href</span>=<span class="text-emerald-300">"https://example.com"</span><span class="text-rose-400">&gt;</span></div>
+<div class="pl-6"><span class="text-rose-400">&lt;img</span> <span class="text-sky-300">src</span>=<span class="text-emerald-300">"logo.png"</span> <span class="text-sky-300">alt</span>=<span class="text-emerald-300">"Website Logo"</span><span class="text-rose-400">&gt;</span></div>
+<div><span class="text-rose-400">&lt;/a&gt;</span></div>
+</div>
+<div class="bg-slate-950 px-5 py-3 text-xs text-slate-300 border-t border-slate-800 font-medium">
+              Ketika gambar diklik, pengguna akan diarahkan ke alamat yang terdapat pada href.
+            </div>
+</div>
+<!-- Pratinjau Interaktif / Clickable Image -->
+<div class="lg:col-span-5 bg-slate-50 rounded-2xl border-2 border-slate-200 p-8 flex flex-col items-center justify-center gap-5 text-center shadow-sm">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-sky-100 text-sky-800 font-mono text-xs font-bold rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">touch_app</span> Clickable Image
+              </span>
+</div>
+<!-- Interactivity Box -->
+<a class="group relative block rounded-2xl overflow-hidden border-2 border-slate-300 hover:border-primary shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer" href="https://example.com" rel="noopener noreferrer" target="_blank">
+<div class="w-56 h-36 bg-white flex items-center justify-center p-4">
+<img alt="Website Logo" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS7fvpVuKxCpXYqX-_aUkGbCxBSFqF0yLVnZxT_EkLTCFhHmGSBxO41viJQ_oLg4waFf3al57184U2gFskW1gD2dhWjbeLmsEiCrAqSFqqabdpQU7vaOB0ajIcB1vLma_ufwefBPMneRxSEzo8CG1K1ZgoOE9ksjUhe6DPBbbGaWjHWUFlToo_Iip49osOhqP8qOSiU6W-S59BFgjsLLUUHh3_NTnfsMj86jIjPebOx9gzzD5QDb0K"/>
+</div>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="bg-slate-900 text-white px-3 py-1.5 rounded-lg text-xs font-mono font-bold flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-sm">open_in_new</span> Klik untuk Buka Link
+                </span>
+</div>
+</a>
+<p class="text-xs text-slate-500 font-medium max-w-xs">
+              Kursor berubah menjadi pointer dan area gambar merespons klik layaknya sebuah tautan teks.
+            </p>
+</div>
+</div>
+</section>
+<!-- 7. SECTION — HTML ELEMENTS USED IN THIS PAGE (Sangat Penting) -->
+<section class="slide-section bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 lg:p-14 shadow-xl border border-slate-800 flex flex-col gap-8">
+<div class="flex flex-col gap-2 max-w-3xl">
+<span class="font-mono text-xs font-bold uppercase tracking-widest text-sky-400">Meta-demonstrasi Struktur</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            HTML Elements Used in This Page
+          </h2>
+<p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Halaman ini sendiri merupakan manifestasi langsung dan contoh nyata dari berbagai tag HTML semantik yang saling bekerja sama.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- header -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-sky-400">&lt;header&gt;</span>
+<p class="text-sm text-slate-200">Navigation dan identitas website.</p>
+</div>
+<!-- h1 / h2 -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-sky-400">&lt;h1&gt; / &lt;h2&gt;</span>
+<p class="text-sm text-slate-200">Judul dan heading presentasi.</p>
+</div>
+<!-- p -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-sky-400">&lt;p&gt;</span>
+<p class="text-sm text-slate-200">Paragraf penjelasan materi.</p>
+</div>
+<!-- a -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-sky-400">&lt;a&gt;</span>
+<p class="text-sm text-slate-200">Hyperlink navigasi dan materi.</p>
+</div>
+<!-- img -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-emerald-400">&lt;img&gt;</span>
+<p class="text-sm text-slate-200">Gambar visual materi dan ilustrasi.</p>
+</div>
+<!-- button -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-emerald-400">&lt;button&gt;</span>
+<p class="text-sm text-slate-200">Tombol interaksi dan kontrol.</p>
+</div>
+<!-- section -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-emerald-400">&lt;section&gt;</span>
+<p class="text-sm text-slate-200">Membagi struktur slide/bagian halaman.</p>
+</div>
+<!-- footer -->
+<div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 flex flex-col gap-2 hover:border-sky-400 transition-colors">
+<span class="font-mono text-base font-bold text-emerald-400">&lt;footer&gt;</span>
+<p class="text-sm text-slate-200">Bagian akhir halaman.</p>
+</div>
+</div>
+</section>
+<!-- 8. SECTION — CODE TO RESULT (Alur Visual Representasi) -->
+<section class="slide-section flex flex-col gap-8 bg-white p-8 lg:p-12 rounded-3xl border border-slate-200 shadow-md">
+<div class="flex flex-col gap-2 text-center max-w-3xl mx-auto">
+<span class="font-mono text-xs font-bold uppercase tracking-widest text-primary">Pipeline Pemrosesan Browser</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Dari Kode Menjadi Halaman Web
+          </h2>
+<!-- Visual diagram alur: HTML CODE -> BROWSER -> WEB PAGE -->
+<div class="inline-flex items-center justify-center gap-3 mt-3 px-5 py-2.5 bg-slate-100 rounded-full font-mono text-xs sm:text-sm font-bold text-slate-700 border border-slate-200">
+<span class="text-primary font-bold">HTML CODE</span>
+<span class="material-symbols-outlined text-base text-slate-400">arrow_forward</span>
+<span class="text-secondary font-bold">BROWSER ENGINE</span>
+<span class="material-symbols-outlined text-base text-slate-400">arrow_forward</span>
+<span class="text-emerald-600 font-bold">WEB PAGE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Panel 1: LINK Comparison -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 flex flex-col gap-5 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-slate-200">
+<span class="font-mono text-xs font-bold text-primary uppercase">Kasus 1: Elemen Link</span>
+<span class="text-xs bg-sky-100 text-sky-800 font-mono px-2 py-0.5 rounded font-bold">&lt;a&gt;</span>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-mono uppercase text-slate-500 font-bold">1. Kode HTML:</span>
+<div class="bg-slate-900 text-slate-100 p-3.5 rounded-xl font-mono text-sm overflow-x-auto">
+<span class="text-rose-400">&lt;a</span> <span class="text-sky-300">href</span>=<span class="text-emerald-300">"https://example.com"</span><span class="text-rose-400">&gt;</span>Visit Website<span class="text-rose-400">&lt;/a&gt;</span>
+</div>
+</div>
+<div class="flex items-center justify-center py-1">
+<span class="material-symbols-outlined text-2xl text-slate-400">arrow_downward</span>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-mono uppercase text-slate-500 font-bold">2. Hasil Tampilan di Browser:</span>
+<div class="bg-white border-2 border-dashed border-sky-300 rounded-xl p-6 text-center flex items-center justify-center">
+<a class="text-primary font-bold text-lg underline underline-offset-4 hover:text-primary-container" href="https://example.com" rel="noopener noreferrer" target="_blank">
+                  Visit Website
+                </a>
+</div>
+</div>
+</div>
+<!-- Panel 2: IMAGE Comparison -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 flex flex-col gap-5 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-slate-200">
+<span class="font-mono text-xs font-bold text-emerald-700 uppercase">Kasus 2: Elemen Gambar</span>
+<span class="text-xs bg-emerald-100 text-emerald-800 font-mono px-2 py-0.5 rounded font-bold">&lt;img&gt;</span>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-mono uppercase text-slate-500 font-bold">1. Kode HTML:</span>
+<div class="bg-slate-900 text-slate-100 p-3.5 rounded-xl font-mono text-sm overflow-x-auto">
+<span class="text-rose-400">&lt;img</span> <span class="text-sky-300">src</span>=<span class="text-emerald-300">"landscape.jpg"</span> <span class="text-sky-300">alt</span>=<span class="text-emerald-300">"Landscape"</span><span class="text-rose-400">&gt;</span>
+</div>
+</div>
+<div class="flex items-center justify-center py-1">
+<span class="material-symbols-outlined text-2xl text-slate-400">arrow_downward</span>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-xs font-mono uppercase text-slate-500 font-bold">2. Hasil Tampilan di Browser:</span>
+<div class="bg-white border-2 border-dashed border-emerald-300 rounded-xl p-3 flex flex-col items-center justify-center">
+<div class="w-full h-32 rounded-lg overflow-hidden border border-slate-200">
+<img alt="Landscape" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwVFePj3EJ1UgiKssTlPj4d8T0je8qb3PnCQ8WXWqK1MjDjyiR5AY2-VG7aOJWYob_8BoV4SltTpHgw9YQU5T7Z8fJBWOiC-be7ov3EOItwLms7NSKHc8hb5In8BahUX_n_um8IKan3NoEio7d6mvmJC3hQ_lRbnMQtlvdPmN3kqpd9J_LMsIEwOjIaAJGt86cvM_7ncI8CRdm1cym4OrVD_J_0WOW-SQTkVitSTtzUV2h4bifFmac"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. SECTION — KESALAHAN YANG SERING TERJADI (COMMON MISTAKES) -->
+<section class="slide-section flex flex-col gap-8 bg-white p-8 lg:p-12 rounded-3xl border border-slate-200 shadow-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-rose-600 font-mono text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-lg">warning</span> Perhatian Khusus
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Kesalahan yang Sering Terjadi
+          </h2>
+<p class="text-slate-600 text-base">Hindari tiga kekeliruan sintaks umum berikut saat menulis kode HTML.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Mistake 01 -->
+<div class="bg-slate-50 border-2 border-rose-100 hover:border-rose-300 rounded-2xl p-6 flex flex-col gap-4 shadow-sm transition-all">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-lg font-mono text-xs font-extrabold">
+                01 Link tanpa href
+              </span>
+<span class="material-symbols-outlined text-rose-600 text-xl">link_off</span>
+</div>
+<div class="flex flex-col gap-2 text-xs font-mono">
+<div class="p-2.5 bg-rose-50 border border-rose-200 rounded-lg text-rose-900">
+<span class="font-bold text-rose-700">Salah:</span><br/>
+                &lt;a&gt;Google&lt;/a&gt;
+              </div>
+<div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900">
+<span class="font-bold text-emerald-700">Benar:</span><br/>
+                &lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+              </div>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">
+              Tanpa atribut <code class="font-mono text-rose-600">href</code>, tag &lt;a&gt; tidak memiliki alamat tujuan sehingga tidak dapat berfungsi sebagai tautan interaktif.
+            </p>
+</div>
+<!-- Mistake 02 -->
+<div class="bg-slate-50 border-2 border-rose-100 hover:border-rose-300 rounded-2xl p-6 flex flex-col gap-4 shadow-sm transition-all">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-lg font-mono text-xs font-extrabold">
+                02 Image tanpa alt
+              </span>
+<span class="material-symbols-outlined text-rose-600 text-xl">hide_image</span>
+</div>
+<div class="flex flex-col gap-2 text-xs font-mono">
+<div class="p-2.5 bg-rose-50 border border-rose-200 rounded-lg text-rose-900">
+<span class="font-bold text-rose-700">Salah:</span><br/>
+                &lt;img src="photo.jpg"&gt;
+              </div>
+<div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-900">
+<span class="font-bold text-emerald-700">Lebih baik:</span><br/>
+                &lt;img src="photo.jpg" alt="Foto pemandangan"&gt;
+              </div>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">
+              Atribut <code class="font-mono text-emerald-700">alt</code> wajib ditambahkan untuk aksesibilitas pembaca layar (screen reader) dan fallback saat berkas gambar gagal diunduh.
+            </p>
+</div>
+<!-- Mistake 03 -->
+<div class="bg-slate-50 border-2 border-rose-100 hover:border-rose-300 rounded-2xl p-6 flex flex-col gap-4 shadow-sm transition-all">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 bg-rose-100 text-rose-800 rounded-lg font-mono text-xs font-extrabold">
+                03 Path gambar salah
+              </span>
+<span class="material-symbols-outlined text-rose-600 text-xl">broken_image</span>
+</div>
+<div class="p-4 bg-white border border-slate-200 rounded-xl text-slate-700 text-xs leading-relaxed">
+              Alamat file pada atribut <code class="font-mono font-bold text-primary">src</code> harus tepat sesuai nama dan struktur folder gambar (memperhatikan ejaan dan huruf kapital).
+            </div>
+<p class="text-xs text-slate-600 leading-relaxed">
+              Jika berkas berada di folder terpisah, pastikan jalur path relatif tepat (misal: <code class="font-mono">images/photo.jpg</code>).
+            </p>
+</div>
+</div>
+</section>
+<!-- 10. SECTION — CONTOH PRAKTIK (MINI PRACTICE) -->
+<section class="slide-section bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-md flex flex-col gap-8" id="practice">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-primary text-white font-mono text-xs font-extrabold rounded-md uppercase">INTERACTIVE DEMO</span>
+<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Contoh Praktik</h2>
+</div>
+<p class="text-slate-600 text-sm sm:text-base mt-1">
+              Demonstrasi interaktif kode HTML dan hasil render langsung.
+            </p>
+</div>
+<!-- Buttons -->
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-xl transition-all flex items-center gap-1.5 border border-slate-300" id="resetDemoBtn">
+<span class="material-symbols-outlined text-base">restart_alt</span> Reset
+            </button>
+<button class="px-5 py-2.5 bg-primary hover:bg-primary-container text-white font-bold text-sm rounded-xl transition-all flex items-center gap-1.5 shadow-md" id="runDemoBtn">
+<span class="material-symbols-outlined text-base">play_arrow</span> Run Example
+            </button>
+</div>
+</div>
+<!-- Dua Panel: Kiri HTML CODE, Kanan LIVE RESULT -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Kiri: HTML CODE -->
+<div class="lg:col-span-6 bg-slate-900 rounded-2xl overflow-hidden shadow-lg border border-slate-800 flex flex-col">
+<div class="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+<span class="font-mono text-xs font-bold text-sky-400 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">terminal</span> HTML CODE
+              </span>
+<span class="text-xs text-slate-400 font-mono">Editor Interaktif</span>
+</div>
+<div class="p-4 flex-1 bg-slate-950/60">
+<textarea class="w-full h-64 bg-transparent text-slate-200 font-mono text-sm leading-relaxed p-2 outline-none resize-none border-0 focus:ring-0" id="practiceCodeArea" spellcheck="false">&lt;div style="text-align: center; padding: 20px; font-family: sans-serif;"&gt;
+  &lt;h3 style="color: #0284c7; margin-bottom: 12px;"&gt;Selamat Datang di Demonstrasi HTML&lt;/h3&gt;
+  &lt;p style="color: #475569; margin-bottom: 16px;"&gt;
+    &lt;a href="https://example.com" target="_blank" style="color: #0284c7; font-weight: bold;"&gt;Visit Website&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwVFePj3EJ1UgiKssTlPj4d8T0je8qb3PnCQ8WXWqK1MjDjyiR5AY2-VG7aOJWYob_8BoV4SltTpHgw9YQU5T7Z8fJBWOiC-be7ov3EOItwLms7NSKHc8hb5In8BahUX_n_um8IKan3NoEio7d6mvmJC3hQ_lRbnMQtlvdPmN3kqpd9J_LMsIEwOjIaAJGt86cvM_7ncI8CRdm1cym4OrVD_J_0WOW-SQTkVitSTtzUV2h4bifFmac" alt="Contoh Pemandangan" style="max-width: 100%; height: 140px; object-fit: cover; border-radius: 8px;"&gt;
+&lt;/div&gt;</textarea>
+</div>
+<div class="bg-slate-950 px-4 py-2 border-t border-slate-800 text-xs font-mono text-slate-400">
+              Ubah teks atau kode di atas, lalu klik <strong>Run Example</strong>.
+            </div>
+</div>
+<!-- Kanan: LIVE RESULT dengan browser chrome -->
+<div class="lg:col-span-6 bg-slate-100 rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 flex flex-col">
+<div class="bg-slate-200/90 px-4 py-3 border-b border-slate-300 flex items-center justify-between">
+<div class="flex items-center gap-2 flex-1 max-w-sm">
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+</div>
+<div class="bg-white px-3 py-1 rounded text-xs font-mono text-slate-600 truncate flex items-center gap-1.5 w-full border border-slate-300">
+<span class="material-symbols-outlined text-xs text-emerald-600">lock</span> https://live-result.htmllab.dev
+                </div>
+</div>
+<span class="font-mono text-xs font-bold text-slate-600 uppercase">LIVE RESULT</span>
+</div>
+<!-- Live Preview Injection Target -->
+<div class="p-6 bg-white flex-1 min-h-[260px] flex items-center justify-center overflow-auto" id="practicePreviewTarget">
+<!-- Rendered directly -->
+</div>
+</div>
+</div>
+</section>
+<!-- 11. SECTION — KESIMPULAN (QUICK SUMMARY) -->
+<section class="slide-section bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-md flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-mono text-xs font-bold uppercase tracking-widest text-primary">Rangkuman Materi</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Kesimpulan
+          </h2>
+</div>
+<!-- Grid Ringkasan Kartu -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- <a> -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 flex flex-col gap-2 shadow-sm hover:border-primary transition-all">
+<span class="font-mono text-lg font-bold text-primary">&lt;a&gt;</span>
+<p class="text-sm font-semibold text-slate-800">Untuk membuat link.</p>
+</div>
+<!-- href -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 flex flex-col gap-2 shadow-sm hover:border-primary transition-all">
+<span class="font-mono text-lg font-bold text-blue-600">href</span>
+<p class="text-sm font-semibold text-slate-800">Untuk menentukan tujuan link.</p>
+</div>
+<!-- <img> -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 flex flex-col gap-2 shadow-sm hover:border-primary transition-all">
+<span class="font-mono text-lg font-bold text-emerald-600">&lt;img&gt;</span>
+<p class="text-sm font-semibold text-slate-800">Untuk menampilkan gambar.</p>
+</div>
+<!-- src -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 flex flex-col gap-2 shadow-sm hover:border-primary transition-all">
+<span class="font-mono text-lg font-bold text-purple-600">src</span>
+<p class="text-sm font-semibold text-slate-800">Untuk menentukan sumber gambar.</p>
+</div>
+<!-- alt -->
+<div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5 flex flex-col gap-2 shadow-sm hover:border-primary transition-all">
+<span class="font-mono text-lg font-bold text-amber-600">alt</span>
+<p class="text-sm font-semibold text-slate-800">Untuk memberikan deskripsi gambar.</p>
+</div>
+</div>
+<!-- Highlight Quote -->
+<div class="p-6 lg:p-8 bg-sky-50 border-l-4 border-primary rounded-r-2xl shadow-sm">
+<p class="text-lg sm:text-xl font-bold text-slate-900 leading-relaxed">
+            “HTML mengubah struktur kode menjadi elemen yang dapat dilihat dan digunakan oleh pengguna melalui browser.”
+          </p>
+</div>
+</section>
+</div>
+</main>
+<!-- 12. FOOTER -->
+<footer class="w-full bg-slate-900 text-slate-300 border-t border-slate-800 mt-20">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
+<!-- Info Kiri -->
+<div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+<div class="flex items-center gap-2.5">
+<div class="px-2 py-0.5 bg-primary text-white rounded font-mono text-xs font-bold">&lt; /&gt;</div>
+<span class="text-xl font-extrabold text-white tracking-tight">HTML LAB</span>
+</div>
+<p class="text-sm font-semibold text-sky-400">HTML Fundamentals — Link &amp; Image</p>
+<p class="text-xs text-slate-400">Learn HTML • Understand the Web • Build the Web</p>
+</div>
+<!-- Navigasi Footer -->
+<nav class="flex items-center gap-6 font-medium text-sm">
+<a class="text-slate-300 hover:text-white transition-colors" href="#hero">Previous Topic</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#hero">Home</a>
+<a class="text-slate-300 hover:text-white transition-colors" href="#practice">Next Topic</a>
+</nav>
+<!-- Hak Cipta -->
+<div class="text-xs text-slate-500 text-center md:text-right font-mono">
+        © 2026 HTML LAB. Kelas &amp; Presentasi.
+      </div>
+</div>
+</footer>
+<!-- Interaktivitas Mini Practice -->
+<script>
+    const codeArea = document.getElementById('practiceCodeArea');
+    const previewBox = document.getElementById('practicePreviewTarget');
+    const runBtn = document.getElementById('runDemoBtn');
+    const resetBtn = document.getElementById('resetDemoBtn');
+
+    const defaultPracticeCode = `<div style="text-align: center; padding: 20px; font-family: sans-serif;">
+  <h3 style="color: #0284c7; margin-bottom: 12px;">Selamat Datang di Demonstrasi HTML</h3>
+  <p style="color: #475569; margin-bottom: 16px;">
+    <a href="https://example.com" target="_blank" style="color: #0284c7; font-weight: bold;">Visit Website</a>
+  </p>
+  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwVFePj3EJ1UgiKssTlPj4d8T0je8qb3PnCQ8WXWqK1MjDjyiR5AY2-VG7aOJWYob_8BoV4SltTpHgw9YQU5T7Z8fJBWOiC-be7ov3EOItwLms7NSKHc8hb5In8BahUX_n_um8IKan3NoEio7d6mvmJC3hQ_lRbnMQtlvdPmN3kqpd9J_LMsIEwOjIaAJGt86cvM_7ncI8CRdm1cym4OrVD_J_0WOW-SQTkVitSTtzUV2h4bifFmac" alt="Contoh Pemandangan" style="max-width: 100%; height: 140px; object-fit: cover; border-radius: 8px;">
+</div>`;
+
+    function renderPractice() {
+      if (previewBox && codeArea) {
+        previewBox.innerHTML = codeArea.value;
+      }
+    }
+
+    if (runBtn) {
+      runBtn.addEventListener('click', renderPractice);
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        codeArea.value = defaultPracticeCode;
+        renderPractice();
+      });
+    }
+
+    // Initial load
+    renderPractice();
+  </script>
+</body></html>
