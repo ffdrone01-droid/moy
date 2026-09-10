@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kementerian Pertahanan Republik Indonesia | Portal Resmi KEMHAN RI</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kemhan: {
+              navy: '#0A192F',
+              deepBlue: '#0F2744',
+              accentGold: '#D4AF37',
+              lightGold: '#F4E5B2',
+              bronze: '#B8860B',
+              maroon: '#8B1E1E',
+              slateBg: '#F8FAFC',
+              cardBorder: '#E2E8F0'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+            serif: ['Merriweather', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts for Prestige Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Merriweather:ital,wght@0,400;0,700;1,300&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome for Defense & Institutional Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="custom-typography-and-decorations">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #1E293B;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #D4AF37 0%, #FFF3B0 50%, #B8860B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #C69214 0%, #E8C15A 50%, #9E7206 100%);
+    }
+    .hero-glass {
+      background: rgba(10, 25, 47, 0.88);
+      backdrop-filter: blur(8px);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-kemhan-accentGold selection:text-kemhan-navy">
+<!-- BEGIN: TopBar -->
+<div class="bg-kemhan-navy text-slate-300 text-xs border-b border-slate-700/60" data-purpose="top-utility-bar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-between">
+<!-- Left: Institutional Badges & Quick Public Portals -->
+<div class="flex items-center space-x-4">
+<span class="inline-flex items-center text-kemhan-lightGold font-medium">
+<i class="fa-solid fa-shield-halved mr-1.5 text-kemhan-accentGold"></i>
+          Republik Indonesia
+        </span>
+<span class="text-slate-600">|</span>
+<div class="hidden md:flex items-center space-x-3 text-slate-300">
+<a class="hover:text-kemhan-accentGold transition flex items-center gap-1" href="#ppid"><i class="fa-solid fa-folder-open text-[10px]"></i> PPID</a>
+<a class="hover:text-kemhan-accentGold transition flex items-center gap-1" href="#lapor"><i class="fa-solid fa-bullhorn text-[10px]"></i> SP4N LAPOR!</a>
+<a class="hover:text-kemhan-accentGold transition flex items-center gap-1" href="#wbs"><i class="fa-solid fa-user-shield text-[10px]"></i> WBS</a>
+<a class="hover:text-kemhan-accentGold transition flex items-center gap-1" href="#jdih"><i class="fa-solid fa-scale-balanced text-[10px]"></i> JDIH</a>
+</div>
+</div>
+<!-- Right: Date, Search, Language Switcher -->
+<div class="flex items-center space-x-4">
+<div class="hidden lg:flex items-center text-slate-400 gap-1.5">
+<i class="fa-regular fa-calendar-days text-slate-500"></i>
+<span id="current-date">Selasa, 8 September 2026</span>
+</div>
+<span class="hidden lg:inline text-slate-600">|</span>
+<!-- Language Switcher -->
+<div class="flex items-center space-x-1.5 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700 text-[11px]">
+<button class="font-bold text-kemhan-accentGold px-1">ID</button>
+<span class="text-slate-500">/</span>
+<button class="text-slate-400 hover:text-white px-1 transition">EN</button>
+</div>
+<!-- High Contrast Accessibility -->
+<button class="text-slate-400 hover:text-kemhan-accentGold transition" title="Mode Aksesibilitas">
+<i class="fa-solid fa-circle-half-stroke"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- END: TopBar -->
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm" data-purpose="site-main-header">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+<!-- Brand & Emblems -->
+<a class="flex items-center space-x-3.5 group" href="#">
+<!-- Republic of Indonesia Garuda / Kemhan Crest Emblem representation -->
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-kemhan-deepBlue to-kemhan-navy border-2 border-kemhan-accentGold flex items-center justify-center shadow-md shrink-0">
+<i class="fa-solid fa-shield-cat text-kemhan-accentGold text-2xl group-hover:scale-105 transition-transform"></i>
+</div>
+<div class="flex flex-col">
+<span class="text-xs tracking-wider uppercase font-semibold text-slate-500">Kementerian Pertahanan</span>
+<span class="text-lg md:text-xl font-bold tracking-tight text-kemhan-navy group-hover:text-kemhan-deepBlue transition-colors font-serif">
+            REPUBLIK INDONESIA
+          </span>
+</div>
+</a>
+<!-- Search Box & Direct Hotline Contact -->
+<div class="hidden md:flex items-center space-x-5">
+<div class="relative w-72">
+<input class="w-full pl-9 pr-4 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-full focus:outline-none focus:ring-2 focus:ring-kemhan-accentGold/40 focus:border-kemhan-accentGold" placeholder="Cari kebijakan, siaran pers, dokumen..." type="text"/>
+<i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+</div>
+<div class="hidden xl:flex items-center gap-3 pl-4 border-l border-slate-200">
+<div class="w-9 h-9 rounded-full bg-amber-50 border border-amber-200 text-kemhan-bronze flex items-center justify-center">
+<i class="fa-solid fa-headset text-sm"></i>
+</div>
+<div class="text-left text-xs leading-tight">
+<p class="text-slate-500">Layanan Informasi PPID</p>
+<p class="font-bold text-kemhan-navy">021-3828551</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Bar -->
+<nav class="bg-kemhan-deepBlue text-white shadow-inner" data-purpose="primary-navigation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between overflow-x-auto custom-scroll">
+<ul class="flex items-center space-x-1 py-1 font-medium text-xs md:text-sm whitespace-nowrap">
+<li>
+<a class="px-3.5 py-2.5 rounded text-kemhan-accentGold font-bold flex items-center gap-1.5 bg-kemhan-navy/60" href="#">
+<i class="fa-solid fa-house"></i> Beranda
+            </a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition flex items-center gap-1" href="#profil">
+              Profil <i class="fa-solid fa-chevron-down text-[10px] text-slate-400"></i>
+</a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition flex items-center gap-1" href="#berita">
+              Berita &amp; Media <i class="fa-solid fa-chevron-down text-[10px] text-slate-400"></i>
+</a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition" href="#kebijakan">
+              Kebijakan Pertahanan
+            </a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition" href="#satker">
+              Satuan Kerja
+            </a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition flex items-center gap-1" href="#layanan">
+              Layanan Publik <span class="bg-kemhan-maroon text-white text-[10px] px-1.5 py-0.2 rounded-full ml-1">Terpadu</span>
+</a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition" href="#publikasi">
+              Publikasi &amp; Dokumen
+            </a>
+</li>
+<li>
+<a class="px-3.5 py-2.5 rounded text-slate-200 hover:text-white hover:bg-slate-800/80 transition" href="#kontak">
+              Kontak
+            </a>
+</li>
+</ul>
+<div class="hidden lg:flex items-center space-x-2 text-xs text-kemhan-lightGold shrink-0">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-medium">DEFENSE READINESS LEVEL: TINGGI</span>
+</div>
+</div>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: FastAccessUnitStrip -->
+<!-- Fast Directory Strip of Satker & Sub-Units as seen on original portal -->
+<section class="bg-slate-100 border-b border-slate-200 py-2" data-purpose="satker-quick-scroller">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-[11px] text-slate-600 flex items-center space-x-3 overflow-x-auto whitespace-nowrap custom-scroll">
+<span class="font-bold text-kemhan-navy uppercase tracking-wider flex items-center gap-1">
+<i class="fa-solid fa-sitemap text-kemhan-accentGold"></i> Satker:
+      </span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">SETJEN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">ITJEN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">DITJEN STRAHAN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">DITJEN RENHAN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">DITJEN POTHAN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">DITJEN KUATHAN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">BALITBANG</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">BADIKLAT</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">BARANAHAN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">BAINSTRANAS</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">PUSDATIN</a>
+<span class="text-slate-400">|</span>
+<a class="hover:text-kemhan-deepBlue font-medium hover:underline" href="#">BIRO HUMAS</a>
+</div>
+</section>
+<!-- END: FastAccessUnitStrip -->
+<main class="py-6 space-y-10">
+<!-- BEGIN: HeroSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-purpose="hero-strategic-showcase">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Left 8 Cols: Main Strategic Hero Headline Banner -->
+<div class="lg:col-span-8 relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group bg-kemhan-navy min-h-[440px] flex flex-col justify-end">
+<!-- Background Cover with Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Konferensi Pers Kemhan dan TNI Terkait Bencana Alam" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_jiIDSPbam7FgUlDkT_7tAZ60YVHr69vdLnmCiBsNyc1nujhcomsqHdt_zt30WuNEKQdSleFp8C4H8xNNM3nsyoX-W-l0t8jdiUuf7yr81XrehLX-lpbLlNZ7uEGC_HKIcVkYoV3pPbhbVtNVsUNY9mbDPK_F7BeYwp32lOclDptTXE5_HZ6CmTCvTlgPzClauebFw_0w5ufhSrX5lrZzKWWhQgx8aUshDwdncdhlO38LqnReqpIp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-kemhan-navy via-kemhan-navy/70 to-transparent"></div>
+</div>
+<!-- Carousel Controls Floating -->
+<div class="absolute top-4 right-4 z-20 flex items-center space-x-2">
+<button class="w-8 h-8 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur flex items-center justify-center transition">
+<i class="fa-solid fa-chevron-left text-xs"></i>
+</button>
+<button class="w-8 h-8 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur flex items-center justify-center transition">
+<i class="fa-solid fa-chevron-right text-xs"></i>
+</button>
+</div>
+<!-- Content Card over Hero -->
+<div class="relative z-10 p-6 md:p-8 space-y-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-kemhan-maroon text-white shadow-sm flex items-center gap-1.5">
+<i class="fa-solid fa-bullhorn text-[11px]"></i> Siaran Pers Resmi
+              </span>
+<span class="text-xs text-slate-300 flex items-center gap-1">
+<i class="fa-regular fa-clock"></i> Selasa, 8 September 2026
+              </span>
+<span class="text-xs text-slate-400">• Biro Humas Setjen Kemhan</span>
+</div>
+<h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight font-serif tracking-tight drop-shadow-sm">
+              Kemhan dan TNI Perkuat Respons Bencana, dari Erupsi Gunung, Gempa NTT Hingga Karhutla
+            </h1>
+<p class="text-slate-200 text-sm md:text-base line-clamp-2 max-w-3xl leading-relaxed">
+              Kementerian Pertahanan RI bersama jajaran Tentara Nasional Indonesia mengerahkan alutsista udara serta satuan reaksi cepat guna mitigasi bencana hidrometeorologi serta rehabilitasi wilayah terdampak nasional.
+            </p>
+<div class="pt-2 flex items-center justify-between">
+<a class="inline-flex items-center px-4 py-2 rounded-lg bg-kemhan-accentGold text-kemhan-navy font-bold text-xs hover:bg-amber-400 transition-all shadow-md gap-1.5" href="#baca-lengkap">
+                Baca Selengkapnya <i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+<!-- Indicators -->
+<div class="flex items-center space-x-1.5">
+<span class="w-6 h-1.5 rounded-full bg-kemhan-accentGold"></span>
+<span class="w-2 h-1.5 rounded-full bg-slate-500"></span>
+<span class="w-2 h-1.5 rounded-full bg-slate-500"></span>
+<span class="w-2 h-1.5 rounded-full bg-slate-500"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Cols: Patriotic / Strategic Campaign Spotlight -->
+<div class="lg:col-span-4 flex flex-col justify-between space-y-4">
+<!-- Dirgahayu RI Card (Faithfully modernized from snapshot) -->
+<div class="relative bg-gradient-to-br from-[#A51C1C] via-[#850E0E] to-[#590707] text-white p-6 rounded-2xl shadow-lg border border-red-800/50 flex flex-col justify-between overflow-hidden">
+<!-- Decorative traditional pattern watermark -->
+<div class="absolute -right-8 -top-8 text-white/10 text-9xl pointer-events-none">
+<i class="fa-solid fa-shield-heart"></i>
+</div>
+<div class="relative z-10 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold tracking-widest text-red-200 uppercase">Kampanye Bela Negara</span>
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs">
+<i class="fa-solid fa-flag text-white"></i>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-1">
+<div class="text-5xl font-black font-serif tracking-tighter text-amber-300">81<span class="text-2xl font-sans text-white">TH</span></div>
+<div class="text-sm uppercase font-bold tracking-wider leading-tight text-slate-100">
+                  DIRGAHAYU<br/><span class="text-amber-300">REPUBLIK INDONESIA</span>
+</div>
+</div>
+<p class="text-xs text-red-100 italic border-l-2 border-amber-400 pl-3 leading-relaxed">
+                "Nusantara Baru, Indonesia Maju. Pertahanan Kuat, Bangsa Berdaulat, Adil dan Makmur."
+              </p>
+</div>
+<div class="relative z-10 pt-4 flex items-center justify-between text-xs">
+<span class="font-medium text-amber-200 flex items-center gap-1">
+<i class="fa-solid fa-medal"></i> Gerakan Bela Negara
+              </span>
+<a class="px-2.5 py-1 bg-white/15 hover:bg-white/25 rounded font-semibold text-white transition" href="#">
+                Ikuti Program →
+              </a>
+</div>
+</div>
+<!-- Ministerial Strategic Briefing Card -->
+<div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-3 flex-1 flex flex-col justify-between">
+<div class="flex items-center justify-between border-b border-slate-100 pb-2">
+<span class="text-xs font-bold text-kemhan-navy uppercase tracking-wider flex items-center gap-1.5">
+<i class="fa-solid fa-quote-left text-kemhan-accentGold"></i> Pesan Menhan RI
+              </span>
+<span class="text-[10px] text-slate-400">Amanat Strategis</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed italic">
+              "Kedaulatan wilayah, keutuhan Negara Kesatuan Republik Indonesia, dan keselamatan segenap tumpah darah Indonesia adalah harga mati yang dijaga melalui sistem Pertahanan Semesta."
+            </p>
+<div class="flex items-center space-x-3 pt-2 border-t border-slate-100">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden shrink-0 border border-kemhan-accentGold">
+<img alt="Menteri Pertahanan RI" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFjh5cRc7z1n8w3Yj74QL_UO9iDOlRIfeCsWut00n9qJCCeVwHDG9NubF5uG2yc_ZLDt0fJbLmqE5vtpacdfT7NuU-LiS93oRkkRS4Gxtc0tCG80JaksDThFBK7EIHLlcXdgabbOXNNAGf6y67o710ZCn2JYb-uUGlxYhYCWK1JrldcDNnYxbCK8CkaJgxnbn4Vz9kqAYR-xP88nRUFyAMjkgXYyspXKR4ZIwWgAxScdRkhVxTHMLU"/>
+</div>
+<div class="text-xs">
+<p class="font-bold text-kemhan-navy leading-none">Menteri Pertahanan RI</p>
+<p class="text-slate-400 text-[10px]">Kementerian Pertahanan Republik Indonesia</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: QuickServicesGrid -->
+<!-- Essential Modern Cards for Portal Layanan & Aplikasi Kemhan -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-purpose="quick-portal-services">
+<div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-4 border-b border-slate-100 gap-2">
+<div>
+<h2 class="text-base font-bold text-kemhan-navy flex items-center gap-2">
+<i class="fa-solid fa-cubes text-kemhan-accentGold"></i> Layanan Aplikasi &amp; Informasi Publik
+            </h2>
+<p class="text-xs text-slate-500">Akses langsung ke portal terpadu, administrasi daring, dan transparansi pertahanan</p>
+</div>
+<a class="text-xs font-semibold text-kemhan-deepBlue hover:text-kemhan-bronze flex items-center gap-1" href="#semua-layanan">
+            Lihat Semua Layanan <i class="fa-solid fa-chevron-right text-[10px]"></i>
+</a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+<!-- LPSE Kemhan -->
+<a class="p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/80 hover:border-kemhan-accentGold/60 transition group flex flex-col items-center text-center" href="#">
+<div class="w-10 h-10 rounded-lg bg-blue-100 text-kemhan-deepBlue group-hover:bg-kemhan-deepBlue group-hover:text-white flex items-center justify-center mb-2 transition-colors">
+<i class="fa-solid fa-cart-shopping text-base"></i>
+</div>
+<span class="text-xs font-bold text-slate-800 group-hover:text-kemhan-deepBlue">LPSE KEMHAN</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Pengadaan Elektronik</span>
+</a>
+<!-- E-RUD Kemhan -->
+<a class="p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/80 hover:border-kemhan-accentGold/60 transition group flex flex-col items-center text-center" href="#">
+<div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 group-hover:bg-emerald-700 group-hover:text-white flex items-center justify-center mb-2 transition-colors">
+<i class="fa-solid fa-file-invoice text-base"></i>
+</div>
+<span class="text-xs font-bold text-slate-800 group-hover:text-kemhan-deepBlue">E-RUD KEMHAN</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Rencana Umum Dokumen</span>
+</a>
+<!-- Perpustakaan Online -->
+<a class="p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/80 hover:border-kemhan-accentGold/60 transition group flex flex-col items-center text-center" href="#">
+<div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-900 group-hover:bg-kemhan-accentGold group-hover:text-kemhan-navy flex items-center justify-center mb-2 transition-colors">
+<i class="fa-solid fa-book-bookmark text-base"></i>
+</div>
+<span class="text-xs font-bold text-slate-800 group-hover:text-kemhan-deepBlue">E-Library</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Perpustakaan Online</span>
+</a>
+<!-- JDIH Peraturan -->
+<a class="p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/80 hover:border-kemhan-accentGold/60 transition group flex flex-col items-center text-center" href="#">
+<div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-800 group-hover:bg-indigo-800 group-hover:text-white flex items-center justify-center mb-2 transition-colors">
+<i class="fa-solid fa-gavel text-base"></i>
+</div>
+<span class="text-xs font-bold text-slate-800 group-hover:text-kemhan-deepBlue">JDIH Kemhan</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Dokumentasi Hukum</span>
+</a>
+<!-- Portal Satu Data -->
+<a class="p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/80 hover:border-kemhan-accentGold/60 transition group flex flex-col items-center text-center" href="#">
+<div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 group-hover:bg-purple-800 group-hover:text-white flex items-center justify-center mb-2 transition-colors">
+<i class="fa-solid fa-chart-pie text-base"></i>
+</div>
+<span class="text-xs font-bold text-slate-800 group-hover:text-kemhan-deepBlue">Satu Data Kemhan</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Statistik Pertahanan</span>
+</a>
+<!-- Whistleblowing System -->
+<a class="p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/80 hover:border-kemhan-accentGold/60 transition group flex flex-col items-center text-center" href="#">
+<div class="w-10 h-10 rounded-lg bg-red-100 text-red-800 group-hover:bg-kemhan-maroon group-hover:text-white flex items-center justify-center mb-2 transition-colors">
+<i class="fa-solid fa-user-secret text-base"></i>
+</div>
+<span class="text-xs font-bold text-slate-800 group-hover:text-kemhan-deepBlue">WBS Online</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Pengaduan Terlindung</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: QuickServicesGrid -->
+<!-- BEGIN: StrategicNewsSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-purpose="news-and-updates" id="berita">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-3 border-b-2 border-slate-200">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-kemhan-bronze">Warta Pertahanan</span>
+<h2 class="text-2xl md:text-3xl font-bold text-kemhan-navy font-serif">Berita &amp; Rilis Resmi Kemhan</h2>
+</div>
+<!-- News Category Tabs -->
+<div class="flex items-center space-x-1.5 mt-3 md:mt-0 text-xs overflow-x-auto">
+<button class="px-3.5 py-1.5 rounded-full bg-kemhan-navy text-white font-medium shadow-sm">Semua</button>
+<button class="px-3.5 py-1.5 rounded-full bg-white hover:bg-slate-200 text-slate-700 font-medium border border-slate-300 transition">Siaran Pers</button>
+<button class="px-3.5 py-1.5 rounded-full bg-white hover:bg-slate-200 text-slate-700 font-medium border border-slate-300 transition">Bilateral &amp; Diplomasi</button>
+<button class="px-3.5 py-1.5 rounded-full bg-white hover:bg-slate-200 text-slate-700 font-medium border border-slate-300 transition">Bela Negara</button>
+<button class="px-3.5 py-1.5 rounded-full bg-white hover:bg-slate-200 text-slate-700 font-medium border border-slate-300 transition">Satuan Kerja</button>
+</div>
+</div>
+<!-- Articles Grid Based on Original Content Data -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Kadet KKRI Bela Negara -->
+<article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
+<div class="h-44 overflow-hidden relative">
+<img alt="Kadet Bela Negara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClvxso8Jeena-psSJn22HthGsI5E0fcp6hFR3S3wDk-7b8OJj7eI6tAr6kNXnUufqKYsDbfjqAXZ6eic6pwd_NPK2mrDMHrw53JDoBWLduNtOzEO9tjR5i0v9dGkpf_Ml4QsG8MP_kATHui1mLbNZsaEN_CL9tuntr1ZldTiCZP7FO8mVo9gVua7F7MM78MQDiqbBOTa_Z-EMnKeVmohhV2MW0mTbnQzuQbeZKeGnOHFUUrkGGWuES"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-500 text-kemhan-navy">Bela Negara</span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center text-[11px] text-slate-400 gap-1.5 mb-1.5">
+<i class="fa-regular fa-calendar"></i> Rabu, 9 September 2026
+              </div>
+<h3 class="font-bold text-sm text-slate-900 group-hover:text-kemhan-bronze transition line-clamp-2 leading-snug">
+                Kadet KKRI Perkuat Ketahanan Mental dan Semangat Kebangsaan di Hari Kelima Pendidikan
+              </h3>
+<p class="text-xs text-slate-500 line-clamp-2 mt-1.5">
+                Ratusan kadet mengikuti latihan kepemimpinan lapangan dan pembinaan ideologi guna membentuk kader pertahanan yang tangguh.
+              </p>
+</div>
+<a class="text-xs font-semibold text-kemhan-deepBlue flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+              Baca Selengkapnya <i class="fa-solid fa-angle-right text-[10px]"></i>
+</a>
+</div>
+</article>
+<!-- Card 2: Menhan Bilateral Sudan -->
+<article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
+<div class="h-44 overflow-hidden relative">
+<img alt="Diplomasi Bilateral Kemhan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1rae75gibJBfZ4zwzwkH3Co4ckZBE6-g5e0nI4f5wYQ79tyzfb5VzrqwoeBbr_qrw8Ceuxakzd54r2ngdwF0JdUmqYKyu5UddmUgHWMGMMsfIA34uKwR9RMUlpOdtqBkdQwQKqYyf_md2xpn1wTLqJVCeCjdvsSD4s8oo5UEjIHnwFAFK2difuMbEvSGrSgmfbGXu11j51hzuHySYvFB-9PY6KHvy-kx8mbK0GG2kc-E8CMnTiNCI"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-blue-700 text-white">Diplomasi</span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center text-[11px] text-slate-400 gap-1.5 mb-1.5">
+<i class="fa-regular fa-calendar"></i> Rabu, 9 September 2026
+              </div>
+<h3 class="font-bold text-sm text-slate-900 group-hover:text-kemhan-bronze transition line-clamp-2 leading-snug">
+                Menhan RI dan Menhan Republik Sudan Perkuat Hubungan Pertahanan Melalui Pertemuan Bilateral di Kemhan
+              </h3>
+<p class="text-xs text-slate-500 line-clamp-2 mt-1.5">
+                Pertemuan difokuskan pada penguatan kerja sama industri pertahanan, transfer teknologi, serta pertukaran perwira siswa militer.
+              </p>
+</div>
+<a class="text-xs font-semibold text-kemhan-deepBlue flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+              Baca Selengkapnya <i class="fa-solid fa-angle-right text-[10px]"></i>
+</a>
+</div>
+</article>
+<!-- Card 3: Budaya Kerja ASN Balitbang -->
+<article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
+<div class="h-44 overflow-hidden relative">
+<img alt="Rakor Budaya Kerja Kemhan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaFAgblHmHApKvhEeSuzWrv7u_uhimOOHVj4HC6LF2v2O2RXpIQsYwyGd9QlfdA31kMaHTHPnbewNakOkBtD4dBd0mJvjVCK4zKzdmQIqc5uX6EoR9ru3oj9dtwkoG62RWtzNZjad5U1xeQ5P1qI5Wo1g2BKi8H9H4IBqPsl-OIT-sAK1i-9Vqz9ELBDHkW2ePavUC5-GhQGgd3XEpy_4emlsABhHZsuNpPkIdVcFnLh36oq-xBfWA"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-700 text-white">Reformasi Birokrasi</span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center text-[11px] text-slate-400 gap-1.5 mb-1.5">
+<i class="fa-regular fa-calendar"></i> Rabu, 9 September 2026
+              </div>
+<h3 class="font-bold text-sm text-slate-900 group-hover:text-kemhan-bronze transition line-clamp-2 leading-snug">
+                Karopeg Setjen Kemhan Pimpin Rakor Agen Perubahan Budaya Kerja ASN BerAKHLAK Tahun 2026
+              </h3>
+<p class="text-xs text-slate-500 line-clamp-2 mt-1.5">
+                Meningkatkan profesionalitas dan integritas seluruh aparatur sipil negara di lingkungan Kementerian Pertahanan.
+              </p>
+</div>
+<a class="text-xs font-semibold text-kemhan-deepBlue flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+              Baca Selengkapnya <i class="fa-solid fa-angle-right text-[10px]"></i>
+</a>
+</div>
+</article>
+<!-- Card 4: Penjualan Eks KRI DPR RI -->
+<article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col group">
+<div class="h-44 overflow-hidden relative">
+<img alt="Rapat Paripurna Alutsista DPR" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnKu1cVFoIGHJQd9lmFv0GohafkkuuO-yLcX3PJWVdarCBddovIsPsjyPfCaLrZN7BZ2WkgTCET8YAGyahEx67uyGOkiq1CxXrZ8B4kEbXhgHrprnu28s5dvQZN__zOU4cUZITgEC_tv83PuuCg-p22M8GwB2D5r0IgWWvc-I-BJsSqJF0pP-qCbtDPpTcx1tx4uvTJHJrHFYOQrn8yUZkdl4DODeZaqW1oZqnnqb-TnPv_7KtvlsJ"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-kemhan-maroon text-white">Regulasi &amp; Parlemen</span>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+<div>
+<div class="flex items-center text-[11px] text-slate-400 gap-1.5 mb-1.5">
+<i class="fa-regular fa-calendar"></i> Selasa, 8 September 2026
+              </div>
+<h3 class="font-bold text-sm text-slate-900 group-hover:text-kemhan-bronze transition line-clamp-2 leading-snug">
+                Menhan RI Hadiri Rapat Paripurna DPR RI, Penjualan Eks KRI Ki Hajar Dewantara Disetujui
+              </h3>
+<p class="text-xs text-slate-500 line-clamp-2 mt-1.5">
+                Penghapusan materiil kapal perang tua demi modernisasi postur alutsista TNI AL dengan armada berteknologi mutakhir.
+              </p>
+</div>
+<a class="text-xs font-semibold text-kemhan-deepBlue flex items-center gap-1 group-hover:translate-x-1 transition-transform" href="#">
+              Baca Selengkapnya <i class="fa-solid fa-angle-right text-[10px]"></i>
+</a>
+</div>
+</article>
+</div>
+<!-- Additional Strategic Quick Headlines from Snapshot -->
+<div class="mt-6 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-200 text-xs">
+<div class="p-2.5 hover:bg-slate-50 rounded transition">
+<span class="text-[10px] text-slate-400 font-semibold uppercase">Audiensi Resmi</span>
+<a class="block font-semibold text-slate-800 hover:text-kemhan-deepBlue mt-1" href="#">
+              Wamenhan Terima Audiensi Chairman Infobank Group Bahas Ketahanan Ekonomi dan Pertahanan
+            </a>
+<span class="text-[10px] text-slate-400 mt-1 block"><i class="fa-regular fa-calendar"></i> 9 September 2026</span>
+</div>
+<div class="p-2.5 hover:bg-slate-50 rounded transition">
+<span class="text-[10px] text-slate-400 font-semibold uppercase">Pembinaan Karakter</span>
+<a class="block font-semibold text-slate-800 hover:text-kemhan-deepBlue mt-1" href="#">
+              Hari Keempat Pembinaan KKRI, Kadet Perkuat Nilai Sejarah, Ideologi, dan Keamanan Siber Digital
+            </a>
+<span class="text-[10px] text-slate-400 mt-1 block"><i class="fa-regular fa-calendar"></i> 8 September 2026</span>
+</div>
+<div class="p-2.5 hover:bg-slate-50 rounded transition">
+<span class="text-[10px] text-slate-400 font-semibold uppercase">Peringatan Keagamaan</span>
+<a class="block font-semibold text-slate-800 hover:text-kemhan-deepBlue mt-1" href="#">
+              Kemhan Peringati Maulid Nabi Muhammad SAW 1448 H, Membina Moralitas Insan Pertahanan
+            </a>
+<span class="text-[10px] text-slate-400 mt-1 block"><i class="fa-regular fa-calendar"></i> 8 September 2026</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: StrategicNewsSection -->
+<!-- BEGIN: DefensePolicyAndDocuments -->
+<!-- Transformed Policy, Financial Reports, and WIRA Magazine Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-purpose="policy-and-publications" id="kebijakan">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left 8 Cols: Dokumen Kebijakan & Transparansi Keuangan -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Dokumen Kebijakan Pertahanan -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+<div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded bg-amber-100 text-amber-800 flex items-center justify-center font-bold">
+<i class="fa-solid fa-scale-balanced"></i>
+</div>
+<div>
+<h3 class="font-bold text-base text-kemhan-navy">Kebijakan Pertahanan Negara</h3>
+<p class="text-xs text-slate-400">Pedoman Strategis Penyelenggaraan Pertahanan Nasional</p>
+</div>
+</div>
+<a class="text-xs font-semibold text-kemhan-bronze hover:underline" href="#">Arsip Dokumen →</a>
+</div>
+<div class="space-y-2.5">
+<!-- Item 1: Buku Putih -->
+<div class="flex items-center justify-between p-3 rounded-xl border border-slate-100 hover:border-kemhan-accentGold/50 bg-slate-50/70 hover:bg-white transition">
+<div class="flex items-center space-x-3">
+<i class="fa-solid fa-file-pdf text-red-600 text-xl"></i>
+<div>
+<h4 class="text-xs md:text-sm font-bold text-slate-800">BUKU PUTIH PERTAHANAN INDONESIA 2024 - 2029</h4>
+<p class="text-[11px] text-slate-400">Dokumen Induk Doktrin dan Strategi Pertahanan Semesta RI</p>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<span class="text-[10px] text-slate-400 hidden sm:inline">14.2 MB</span>
+<a class="px-2.5 py-1 text-xs rounded bg-kemhan-deepBlue text-white hover:bg-kemhan-navy transition flex items-center gap-1" href="#">
+<i class="fa-solid fa-download"></i> Unduh
+                  </a>
+</div>
+</div>
+<!-- Item 2: Jakhanneg -->
+<div class="flex items-center justify-between p-3 rounded-xl border border-slate-100 hover:border-kemhan-accentGold/50 bg-slate-50/70 hover:bg-white transition">
+<div class="flex items-center space-x-3">
+<i class="fa-solid fa-file-pdf text-red-600 text-xl"></i>
+<div>
+<h4 class="text-xs md:text-sm font-bold text-slate-800">Kebijakan Penyelenggaraan Pertahanan Negara (JAKHANNEG)</h4>
+<p class="text-[11px] text-slate-400">Rencana Strategis Penyelenggaraan Pertahanan Tahunan</p>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<span class="text-[10px] text-slate-400 hidden sm:inline">8.6 MB</span>
+<a class="px-2.5 py-1 text-xs rounded bg-kemhan-deepBlue text-white hover:bg-kemhan-navy transition flex items-center gap-1" href="#">
+<i class="fa-solid fa-download"></i> Unduh
+                  </a>
+</div>
+</div>
+<!-- Item 3: Jakumhanneg -->
+<div class="flex items-center justify-between p-3 rounded-xl border border-slate-100 hover:border-kemhan-accentGold/50 bg-slate-50/70 hover:bg-white transition">
+<div class="flex items-center space-x-3">
+<i class="fa-solid fa-file-pdf text-red-600 text-xl"></i>
+<div>
+<h4 class="text-xs md:text-sm font-bold text-slate-800">Kebijakan Umum Pertahanan Negara (JAKUMHANNEG)</h4>
+<p class="text-[11px] text-slate-400">Peraturan Presiden RI mengenai Kerangka Pertahanan Integratif</p>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<span class="text-[10px] text-slate-400 hidden sm:inline">5.1 MB</span>
+<a class="px-2.5 py-1 text-xs rounded bg-kemhan-deepBlue text-white hover:bg-kemhan-navy transition flex items-center gap-1" href="#">
+<i class="fa-solid fa-download"></i> Unduh
+                  </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Laporan Keuangan & Akuntabilitas (From Snapshot) -->
+<div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+<div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div>
+<h3 class="font-bold text-base text-kemhan-navy">Transparansi Anggaran &amp; Akuntabilitas</h3>
+<p class="text-xs text-slate-400">Opini Wajar Tanpa Pengecualian (WTP) Badan Pemeriksa Keuangan</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                WTP 8 Tahun Berturut-turut
+              </span>
+</div>
+<!-- Tab Tahun Laporan -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+<button class="py-2 text-center text-xs font-bold rounded-lg bg-kemhan-deepBlue text-white">Tahun 2025 (Audited)</button>
+<button class="py-2 text-center text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">Tahun 2024</button>
+<button class="py-2 text-center text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">Tahun 2023</button>
+<button class="py-2 text-center text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">Tahun 2022</button>
+</div>
+<div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded bg-red-100 text-red-700 flex items-center justify-center font-bold">
+<i class="fa-regular fa-file-lines"></i>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-800">Laporan Keuangan Kementerian Pertahanan RI Tahun Anggaran 2025</p>
+<p class="text-[11px] text-slate-400">Status: Selesai Diaudit BPK RI • Transparansi Pelaksanaan DIPA</p>
+</div>
+</div>
+<a class="text-xs font-bold text-kemhan-deepBlue hover:underline flex items-center gap-1" href="#">
+                Unduh PDF <i class="fa-solid fa-arrow-down text-[10px]"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Right 4 Cols: Majalah WIRA & Media Cetak Resmi -->
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between h-full">
+<div>
+<div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+<span class="font-bold text-sm text-kemhan-navy flex items-center gap-2">
+<i class="fa-solid fa-book-open text-kemhan-accentGold"></i> MAJALAH WIRA
+                </span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-kemhan-bronze bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Edisi Cetak</span>
+</div>
+<!-- Magazine Cover Spotlight -->
+<div class="relative rounded-xl overflow-hidden shadow-lg border border-slate-300 group max-w-[260px] mx-auto mb-4">
+<img alt="Sampul Majalah WIRA Kemhan RI" class="w-full h-auto object-cover group-hover:scale-102 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPFLAN_Egrnbql2ALQz53C4rlqkPXc4D94trajlZ8ZTO7ZGUwZfvxyWTEPzobY5YPAi2Qx6lHFLsbUPpWYbyRybpZzrg5hs9Y3Fn39milYad4SLAVbzz3CiOBLSG8TAUWVI-4c8E9ObQs9xP0k4Kywyrr2sHqDfAZNRk8Mz8TdkGHOTot7tpZVs5sZxrAv1hFcIpXN4Py3eExlV6fs6LVBrngZzTs717p4hp2IAUNlLbWmvkQvTDRg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
+<span class="text-[10px] font-bold text-kemhan-lightGold uppercase">Edisi Khusus</span>
+<p class="text-xs font-bold font-serif leading-tight">Membangun Komponen Cadangan yang Tangguh &amp; Berdedikasi</p>
+</div>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-bold text-sm text-kemhan-navy">Majalah Pertahanan 'WIRA' Vol. 78</h4>
+<p class="text-xs text-slate-500">Diterbitkan oleh Pusat Komunikasi Publik Setjen Kemhan</p>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+<a class="w-full py-2 px-3 rounded-lg bg-kemhan-navy hover:bg-kemhan-deepBlue text-white text-xs font-bold text-center flex items-center justify-center gap-2 transition" href="#">
+<i class="fa-solid fa-book-open-reader"></i> Baca E-Magazine Flip
+              </a>
+<a class="w-full py-2 px-3 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-medium text-center flex items-center justify-center gap-2 transition" href="#">
+<i class="fa-solid fa-download"></i> Unduh Salinan Lengkap (PDF)
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DefensePolicyAndDocuments -->
+<!-- BEGIN: MultimediaGallerySection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-purpose="multimedia-documentation">
+<div class="bg-gradient-to-br from-kemhan-deepBlue to-kemhan-navy rounded-2xl p-6 md:p-8 text-white shadow-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-700/80 gap-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-kemhan-lightGold">Dokumentasi Terpadu</span>
+<h2 class="text-xl md:text-2xl font-bold font-serif">Galeri Foto &amp; Multimedia Kemhan RI</h2>
+</div>
+<div class="flex items-center space-x-2">
+<button class="px-3.5 py-1.5 rounded-lg text-xs font-bold bg-kemhan-accentGold text-kemhan-navy">Foto Kegiatan</button>
+<button class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700">Video Siaran</button>
+<button class="px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700">Infografis</button>
+</div>
+</div>
+<!-- Media Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+<!-- Media Item 1 -->
+<div class="group relative rounded-xl overflow-hidden bg-slate-900 border border-slate-700 shadow-md">
+<div class="aspect-video overflow-hidden">
+<img alt="Apresiasi Relawan Kemanusiaan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDih4WGPcFfkjmQe0LPKZpfbP7pDht8E6TX94XrhFirRutmwzOpi3851U7ly668b1MFhl9paEjhI_EFdpumPFtim-yChwO1Huib4JyTKKSC2_IboLHqjFs3rM7oUfrkDlsrjh44nJ4znTIlX5fW40tHNRESG6z7g8ovd0DtCxKH7EcvOLIREVPmhOlnG2wpP0wo6y6W5AcKmx_-77s_CJ41bQqv4xALZZ6V1sdNWC_bpSlchNu3RwYO"/>
+</div>
+<div class="p-4 space-y-1.5">
+<span class="text-[10px] text-kemhan-lightGold font-semibold uppercase tracking-wider">Foto Resmi</span>
+<h4 class="text-xs md:text-sm font-bold text-white group-hover:text-kemhan-accentGold transition line-clamp-2">
+                Kemhan Berikan Apresiasi Kepada Insan Pers Atas Kontribusi dalam Misi Kemanusiaan di Gaza
+              </h4>
+<p class="text-[11px] text-slate-400 pt-1 flex items-center gap-1.5">
+<i class="fa-solid fa-camera"></i> 14 Foto Dokumentasi • Biro Humas
+              </p>
+</div>
+</div>
+<!-- Media Item 2 -->
+<div class="group relative rounded-xl overflow-hidden bg-slate-900 border border-slate-700 shadow-md">
+<div class="aspect-video overflow-hidden">
+<img alt="FGD Penanganan Stabilitas Wilayah" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmnHC5L93gEtvvecuBHlZgc0OJlLjPmS70oCKiZnK9NwqYiD6Jr7_pPvRARNLljGvzF8QsS862kvgQ_MJxPWwr8bURIDhgQ1TBWKyKRQ-0Yhcx21n0uED1jRKYz9jDHnEZv7w1a8IrYvRfyDoqK0RY2glKpN1ATVSCDVA1jnPg80UTfWQSABkY29vW2OPHTy3NddA5bkjXLXZ4Eb0MDXlQQ6QIqZRfkBzxeJ1SGUJnJqLRediTKtR"/>
+</div>
+<div class="p-4 space-y-1.5">
+<span class="text-[10px] text-kemhan-lightGold font-semibold uppercase tracking-wider">Diskusi Strategis</span>
+<h4 class="text-xs md:text-sm font-bold text-white group-hover:text-kemhan-accentGold transition line-clamp-2">
+                Dit. Kebijakan Kemhan Gelar FGD Penanganan Separatis dan Penguatan Teritorial di Jakarta
+              </h4>
+<p class="text-[11px] text-slate-400 pt-1 flex items-center gap-1.5">
+<i class="fa-solid fa-camera"></i> 8 Foto Dokumentasi • Ditjen Strahan
+              </p>
+</div>
+</div>
+<!-- Media Item 3 (Video Preview) -->
+<div class="group relative rounded-xl overflow-hidden bg-slate-900 border border-slate-700 shadow-md sm:col-span-2 lg:col-span-1">
+<div class="aspect-video overflow-hidden relative">
+<img alt="Latihan Gabungan TNI" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATYS-xcMm62EGamP3-3bHQtZ7j_nAJa-NrTcoo_BOWTc0b5ZUulY1CVVIDYEKiMZRK6LMuN1EwUUaXROVi9PZlpIA52fu-_UZRF2a-f3HyxAGGKBbWJI9DdcFV8UMry95N8cgSKQVE0ImJE-6gHm0m5ip4h5axtWzi0TN5X_JTviBVdfVUDv-N2t_Petl9wQQIphRtbNvIuLvBlJh0tyU2dXw-fbYj1Rb4Yqs2WuQcmxLgSmb36QMa"/>
+<!-- Video Play Button Overlay -->
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-kemhan-accentGold text-kemhan-navy flex items-center justify-center text-lg pl-0.5 shadow-lg group-hover:scale-110 transition-transform">
+<i class="fa-solid fa-play"></i>
+</div>
+</div>
+</div>
+<div class="p-4 space-y-1.5">
+<span class="text-[10px] text-kemhan-lightGold font-semibold uppercase tracking-wider">Video Liputan</span>
+<h4 class="text-xs md:text-sm font-bold text-white group-hover:text-kemhan-accentGold transition line-clamp-2">
+                Dokumenter: Kesiapsiagaan Alutsista Baru dan Kekuatan Pertahanan Matra Udara Nasional
+              </h4>
+<p class="text-[11px] text-slate-400 pt-1 flex items-center gap-1.5">
+<i class="fa-brands fa-youtube text-red-400"></i> Durasi 12:45 • Kemhan TV Official
+              </p>
+</div>
+</div>
+</div>
+<div class="text-center pt-6 mt-4 border-t border-slate-700/60">
+<a class="inline-flex items-center gap-2 text-xs font-bold text-kemhan-lightGold hover:text-white transition" href="#">
+            Jelajahi Arsip Multimedia Kemhan RI →
+          </a>
+</div>
+</div>
+</section>
+<!-- END: MultimediaGallerySection -->
+</main>
+<!-- BEGIN: InstitutionalFooter -->
+<footer class="bg-kemhan-navy text-slate-300 pt-12 pb-6 border-t-4 border-kemhan-accentGold" data-purpose="institutional-footer" id="kontak">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Part: Logo, Address, Links, Visitor Counter -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
+<!-- Identity & Address (4 cols) -->
+<div class="lg:col-span-4 space-y-4">
+<div class="flex items-center space-x-3">
+<div class="w-11 h-11 rounded-full bg-slate-900 border-2 border-kemhan-accentGold flex items-center justify-center">
+<i class="fa-solid fa-shield-halved text-kemhan-accentGold text-xl"></i>
+</div>
+<div>
+<p class="text-xs font-semibold text-slate-400 tracking-wider uppercase">KEMENTERIAN PERTAHANAN</p>
+<p class="text-base font-bold text-white font-serif">REPUBLIK INDONESIA</p>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed">
+            Jl. Medan Merdeka Barat No. 13-14, Gambir, Jakarta Pusat 10110, Daerah Khusus Ibukota Jakarta - Republik Indonesia.
+          </p>
+<div class="space-y-1.5 text-xs text-slate-300">
+<div class="flex items-center gap-2.5">
+<i class="fa-solid fa-phone text-kemhan-accentGold w-4"></i>
+<span>Telp: 021-3828551 / 021-3828552</span>
+</div>
+<div class="flex items-center gap-2.5">
+<i class="fa-solid fa-envelope text-kemhan-accentGold w-4"></i>
+<span>Email: <a class="hover:text-white underline" href="mailto:ppid@kemhan.go.id">ppid@kemhan.go.id</a></span>
+</div>
+<div class="flex items-center gap-2.5">
+<i class="fa-solid fa-clock text-kemhan-accentGold w-4"></i>
+<span>Jam Kerja: Senin - Jumat (07.30 - 16.00 WIB)</span>
+</div>
+</div>
+<!-- Social Links -->
+<div class="pt-2 flex items-center space-x-2.5">
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-kemhan-accentGold hover:text-kemhan-navy text-slate-300 flex items-center justify-center transition" href="#" title="Facebook Kemhan">
+<i class="fa-brands fa-facebook-f text-xs"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-kemhan-accentGold hover:text-kemhan-navy text-slate-300 flex items-center justify-center transition" href="#" title="X (Twitter) Kemhan">
+<i class="fa-brands fa-x-twitter text-xs"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-kemhan-accentGold hover:text-kemhan-navy text-slate-300 flex items-center justify-center transition" href="#" title="Instagram Kemhan">
+<i class="fa-brands fa-instagram text-xs"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-kemhan-accentGold hover:text-kemhan-navy text-slate-300 flex items-center justify-center transition" href="#" title="YouTube Kemhan RI">
+<i class="fa-brands fa-youtube text-xs"></i>
+</a>
+</div>
+</div>
+<!-- Matra & Pertahanan TNI Links (3 cols) -->
+<div class="lg:col-span-3 space-y-3">
+<h4 class="text-xs font-bold tracking-wider uppercase text-kemhan-lightGold border-b border-slate-800 pb-2">
+            Tautan Matra Pertahanan
+          </h4>
+<ul class="space-y-2 text-xs text-slate-400">
+<li><a class="hover:text-kemhan-accentGold transition flex items-center gap-1.5" href="#"><i class="fa-solid fa-angle-right text-[10px]"></i> Mabes Tentara Nasional Indonesia</a></li>
+<li><a class="hover:text-kemhan-accentGold transition flex items-center gap-1.5" href="#"><i class="fa-solid fa-angle-right text-[10px]"></i> TNI Angkatan Darat (KASAD)</a></li>
+<li><a class="hover:text-kemhan-accentGold transition flex items-center gap-1.5" href="#"><i class="fa-solid fa-angle-right text-[10px]"></i> TNI Angkatan Laut (KASAL)</a></li>
+<li><a class="hover:text-kemhan-accentGold transition flex items-center gap-1.5" href="#"><i class="fa-solid fa-angle-right text-[10px]"></i> TNI Angkatan Udara (KASAU)</a></li>
+<li><a class="hover:text-kemhan-accentGold transition flex items-center gap-1.5" href="#"><i class="fa-solid fa-angle-right text-[10px]"></i> Universitas Pertahanan (UNHAN RI)</a></li>
+<li><a class="hover:text-kemhan-accentGold transition flex items-center gap-1.5" href="#"><i class="fa-solid fa-angle-right text-[10px]"></i> Komcad Kemhan RI</a></li>
+</ul>
+</div>
+<!-- Portal Layanan & Transparansi (2 cols) -->
+<div class="lg:col-span-2 space-y-3">
+<h4 class="text-xs font-bold tracking-wider uppercase text-kemhan-lightGold border-b border-slate-800 pb-2">
+            Informasi Publik
+          </h4>
+<ul class="space-y-2 text-xs text-slate-400">
+<li><a class="hover:text-kemhan-accentGold transition" href="#">Profil Kemhan RI</a></li>
+<li><a class="hover:text-kemhan-accentGold transition" href="#">Struktur Organisasi</a></li>
+<li><a class="hover:text-kemhan-accentGold transition" href="#">Regulasi / JDIH</a></li>
+<li><a class="hover:text-kemhan-accentGold transition" href="#">Permohonan Informasi</a></li>
+<li><a class="hover:text-kemhan-accentGold transition" href="#">Pengaduan SP4N!</a></li>
+<li><a class="hover:text-kemhan-accentGold transition" href="#">Peta Situs</a></li>
+</ul>
+</div>
+<!-- Visitor Statistics Widget from Snapshot (3 cols) -->
+<div class="lg:col-span-3 space-y-3">
+<h4 class="text-xs font-bold tracking-wider uppercase text-kemhan-lightGold border-b border-slate-800 pb-2">
+            Statistik Pengunjung
+          </h4>
+<div class="bg-slate-900/90 rounded-xl p-3.5 border border-slate-800 text-xs space-y-2 font-mono">
+<div class="flex justify-between text-slate-300">
+<span class="font-sans text-slate-400">Pengunjung Hari Ini:</span>
+<span class="font-bold text-kemhan-lightGold">31.184</span>
+</div>
+<div class="flex justify-between text-slate-300">
+<span class="font-sans text-slate-400">Pengunjung Minggu Ini:</span>
+<span class="font-bold text-white">550.193</span>
+</div>
+<div class="flex justify-between text-slate-300">
+<span class="font-sans text-slate-400">Pengunjung Bulan Ini:</span>
+<span class="font-bold text-white">2.077.435</span>
+</div>
+<div class="border-t border-slate-800 pt-2 flex justify-between text-kemhan-accentGold font-bold">
+<span class="font-sans">Total Kunjungan:</span>
+<span>48.912.870</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-[11px] text-slate-400">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>Server Kemhan RI: Beroperasi Normal</span>
+</div>
+</div>
+</div>
+<!-- Bottom Bar: Copyright & Compliance -->
+<div class="pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+<p>
+          © 2026 Hak Cipta Dilindungi Undang-Undang. Kementerian Pertahanan Republik Indonesia.
+        </p>
+<div class="flex items-center space-x-4 text-[11px]">
+<a class="hover:text-white" href="#">Kebijakan Privasi</a>
+<span>•</span>
+<a class="hover:text-white" href="#">Syarat Penggunaan</a>
+<span>•</span>
+<a class="hover:text-white" href="#">Aksesibilitas</a>
+<span>•</span>
+<a class="hover:text-white" href="#">Keamanan Informasi (ISO 27001)</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: InstitutionalFooter -->
+</body></html>
