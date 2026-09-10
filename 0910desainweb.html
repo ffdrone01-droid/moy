@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#0e1415","on-background":"#dee3e4","error-container":"#93000a","surface-container-highest":"#303637","on-secondary-fixed":"#032112","surface-dim":"#0e1415","surface-container-low":"#171d1e","tertiary-fixed-dim":"#4cd7f6","on-tertiary-fixed-variant":"#004e5c","surface-container-high":"#252b2c","primary-fixed":"#71f8e4","on-tertiary-fixed":"#001f26","primary-container":"#14b8a6","tertiary":"#4cd7f6","inverse-on-surface":"#2b3132","on-primary":"#003731","secondary-fixed":"#c9ebd3","surface-container-lowest":"#090f10","outline-variant":"#3c4947","on-tertiary":"#003640","primary":"#4fdbc8","surface-container":"#1b2122","inverse-primary":"#006b5f","on-tertiary-container":"#00414d","primary-fixed-dim":"#4fdbc8","on-secondary-container":"#a0c0aa","background":"#0e1415","error":"#ffb4ab","on-secondary-fixed-variant":"#304d3c","tertiary-container":"#00b4d2","on-error-container":"#ffdad6","on-error":"#690005","surface-tint":"#4fdbc8","surface-bright":"#343a3b","secondary-fixed-dim":"#adceb8","inverse-surface":"#dee3e4","on-primary-fixed":"#00201c","on-primary-fixed-variant":"#005048","secondary-container":"#324f3e","on-primary-container":"#00423b","on-surface-variant":"#bbcac6","tertiary-fixed":"#acedff","surface-variant":"#303637","secondary":"#adceb8","on-surface":"#dee3e4","outline":"#859490","on-secondary":"#193626"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-2xs":"0.125rem","space-base":"1rem","grid-margin":"1.5rem","space-2xl":"3rem","grid-gutter":"1rem","space-md":"0.75rem","space-lg":"1.5rem","space-xl":"2rem","space-xs":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"label-tactical":["JetBrains Mono"],"headline-md":["Space Grotesk"],"headline-xl":["Space Grotesk"],"display-lg":["Space Grotesk"],"data-mono-sm":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"data-mono-md":["JetBrains Mono"],"body-md":["Inter"],"headline-sm":["Space Grotesk"],"body-lg":["Inter"],"data-mono-lg":["JetBrains Mono"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-tactical":["10px",{"lineHeight":"12px","letterSpacing":"0.12em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"data-mono-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"400"}],"display-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0.03em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"data-mono-lg":["16px",{"lineHeight":"22px","letterSpacing":"0.02em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-14 w-full px-grid-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Minimalist modern military cyber defense insignia, geometric shield emblem with interconnected intelligence grid nodes and stylized Indonesian archipelago wings motif, tactical deep emerald and cyan teal vector badge. Design context: - Primary color: #14b8a6
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WKAyygQrRLvMtfjLuTF1ZqVWacagVicnNRzNBoThE-jYteUR_jbhn2xINVn9pbLhC6RRklCFPR915JphBYM0JFCMHeAUF5txwivt6censwtVCENhHQfNjNIsu-FnujJOgLV6omIjZOUpq6NZ7R0Uz2LStlVs_8gV8dCk5mPlmuWzPCLKh4TQbcl_ijU33p8EZ5uc4DC4xZAtMTRO2p3NOFruY2ow25GcuEr1ciGkg0xYIVB8dcpTpiTw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface uppercase leading-tight">NUSANTARA CYBER COMMAND</span><span class="font-label-tactical text-label-tactical uppercase text-primary tracking-widest leading-none">CYBER INTELLIGENCE PLATFORM</span></div></div><div class="hidden xl:flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-secondary-container/40 rounded"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-tactical text-label-tactical text-primary uppercase font-bold">SYSTEM OPERATIONAL</span></div><div class="flex items-center px-space-sm py-space-2xs bg-surface-container-high rounded"><span class="font-label-tactical text-label-tactical text-secondary-fixed uppercase font-semibold">DEFCON 3 // LEVEL-II READINESS</span></div><div class="flex flex-col text-right"><span class="font-data-mono-sm text-data-mono-sm text-on-surface font-medium">05:42:19 WIB <span class="text-on-surface-variant">(UTC+7)</span></span><span class="font-data-mono-sm text-data-mono-sm text-outline font-normal">0°47'16.8"S 116°49'44.4"E [IKN HUB]</span></div></div><div class="flex items-center gap-space-md"><div class="relative hidden lg:block w-56"><span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-base leading-none">search</span><input class="w-full h-8 pl-8 pr-space-sm bg-surface-container-low text-on-surface placeholder:text-outline text-data-mono-sm font-data-mono-sm rounded focus:outline-none focus:bg-surface-container-high" placeholder="SEC_QUERY //" type="text"/></div><div class="relative flex items-center justify-center"><button class="w-8 h-8 rounded bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-lg">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 bg-primary-container text-on-primary font-label-tactical text-label-tactical rounded-full flex items-center justify-center font-bold">4</span></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden md:flex flex-col text-right"><span class="font-label-tactical text-label-tactical text-on-surface uppercase font-semibold">KOL. INF. L. PURNAMASARI</span><span class="font-data-mono-sm text-data-mono-sm text-primary uppercase">SOC DIRECTOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XW0W4mRfprCTKRpqkkqH-a2aJNJZII8tnQ3HD2qYk6KrjufMpz66jhKdr82KRIbD77kezVLjmcR6h_lIkmRWqFOnUQ58PMNFDaWByjHAonh51742b1oUD3G1rm7TGL9QmYnR-egFP8t11qhrw2IslaYt-HWmKI6OX1pwaXZtOSDFqSO9BvrJzvPKT4GK843A8VTxkZj-m0ulbihEM1VJhe7eGz5CJ7WarrDi-knhCFwgrylNaUdLXpEw"/></div></div></div></header><aside class="fixed left-0 top-14 h-[calc(100vh-3.5rem)] w-64 bg-surface-container-low z-40 flex flex-col justify-between shadow-[0_4px_16px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 py-space-md"><div class="px-space-md pb-space-sm mb-space-xs"><span class="font-label-tactical text-label-tactical uppercase tracking-wider text-outline">MISSION COMMAND</span></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-[0_0_12px_rgba(20,184,166,0.2)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded uppercase tracking-wider transition-all bg-primary-container text-on-primary font-semibold shadow-[0_0_12px_rgba(20,184,166,0.2)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg leading-none">dashboard</span>DASHBOARD</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-label-tactical text-label-tactical uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="intelligence" href="#"><span class="material-symbols-outlined text-lg leading-none">radar</span>INTELLIGENCE</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-label-tactical text-label-tactical uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="monitoring" href="#"><span class="material-symbols-outlined text-lg leading-none">monitoring</span>MONITORING</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-label-tactical text-label-tactical uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="incidents" href="#"><span class="material-symbols-outlined text-lg leading-none">warning</span>INCIDENTS</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-label-tactical text-label-tactical uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-lg leading-none">description</span>REPORTS</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-label-tactical text-label-tactical uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="knowledge" href="#"><span class="material-symbols-outlined text-lg leading-none">hub</span>KNOWLEDGE</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded font-label-tactical text-label-tactical uppercase tracking-wider text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-lg leading-none">settings</span>SETTINGS</a></nav></div><div class="p-space-md m-space-xs rounded bg-surface-container-lowest flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-tactical text-label-tactical text-primary uppercase font-semibold">CLEARANCE</span><span class="font-data-mono-sm text-data-mono-sm text-outline">1.2ms</span></div><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant leading-tight">ENCRYPTED BSSN-TNI MESH // POST-QUANTUM</span><div class="flex items-center gap-space-xs mt-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-tactical text-label-tactical text-secondary-fixed uppercase">AIR-GAPPED SECURE</span></div></div></aside><div class="pl-64"><main class="relative pt-14 w-full px-grid-margin py-space-lg min-h-screen bg-surface"><div class="flex flex-col w-full gap-space-lg pb-space-2xl">
+<!-- WORKSPACE COMMAND HEADER -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md p-space-lg bg-surface-container-lowest rounded shadow-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-tactical text-label-tactical text-primary uppercase font-bold tracking-widest">
+          STRATEGIC CYBER DEFENSE INITIATIVE • REPUBLIK INDONESIA // CLASSIFIED LEVEL-4
+        </span>
+</div>
+<div class="flex items-baseline gap-space-md flex-wrap">
+<h1 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight font-semibold">
+          NATIONAL CYBER SITUATION
+        </h1>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary-fixed bg-secondary-container/40 px-space-sm py-space-2xs rounded uppercase">
+          OP-GRID // CYBER-INTELLIGENCE MATRIX
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Integrated operational overview of national cyber posture, archipelagic threat vectors, subsea fiber line telemetry, and automated kinetic countermeasures across sovereign territory.
+      </p>
+</div>
+<!-- Right Controls -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-tactical text-label-tactical rounded transition-colors uppercase">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+        EXECUTIVE BRIEF (PDF)
+      </button>
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low rounded">
+<span class="material-symbols-outlined text-base text-outline">calendar_today</span>
+<select class="bg-transparent font-label-tactical text-label-tactical text-on-surface uppercase focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high text-on-surface" value="24h">TIMEFRAME: LAST 24 HOURS</option>
+<option class="bg-surface-container-high text-on-surface" value="12h">TIMEFRAME: LAST 12 HOURS</option>
+<option class="bg-surface-container-high text-on-surface" value="7d">TIMEFRAME: LAST 7 DAYS</option>
+</select>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container text-on-primary font-label-tactical text-label-tactical rounded transition-all shadow-sm font-semibold uppercase" id="refresh-btn">
+<span class="material-symbols-outlined text-base animate-spin" style="animation-duration: 6s;">autorenew</span>
+<span>REFRESH TELEMETRY <span class="font-data-mono-sm font-normal text-on-primary/80">[30s]</span></span>
+</button>
+</div>
+</div>
+<!-- FOUR PRIMARY KPI CARDS -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1: Threat Level -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-tactical text-label-tactical uppercase tracking-wider text-outline">DIRECTIVE TELEMETRY</span>
+<span class="px-space-xs py-0.5 rounded bg-error-container/40 text-error font-label-tactical text-label-tactical font-semibold uppercase">
+          DEFCON 3
+        </span>
+</div>
+<div class="flex items-center justify-between my-space-xs">
+<div>
+<span class="font-label-tactical text-label-tactical uppercase text-on-surface-variant">THREAT POSTURE</span>
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight uppercase leading-tight">
+            MODERATE-ELEVATED
+          </div>
+<div class="font-data-mono-sm text-data-mono-sm text-error mt-0.5">
+            DDoS • APT-41 • 0-Day Kernel
+          </div>
+</div>
+<!-- Progress Gauge Ring -->
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="68, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-data-mono-sm text-data-mono-sm text-primary font-semibold">68%</span>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span>DIRECTIVE STATUS</span>
+<span class="text-primary font-medium">SCRUBBING ACTIVE</span>
+</div>
+</div>
+<!-- Card 2: Active Incidents -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-tactical text-label-tactical uppercase tracking-wider text-outline">INCIDENT QUEUE</span>
+<span class="font-data-mono-sm text-data-mono-sm text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +2 vs 12h
+        </span>
+</div>
+<div>
+<span class="font-label-tactical text-label-tactical uppercase text-on-surface-variant">ACTIVE ENGAGEMENTS</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">14</span>
+<span class="font-headline-sm text-headline-sm text-outline">ACTIVE</span>
+</div>
+<div class="grid grid-cols-3 gap-1 mt-space-xs text-center font-data-mono-sm text-data-mono-sm">
+<div class="bg-error-container/30 text-error p-1 rounded">2 CRIT</div>
+<div class="bg-secondary-container/40 text-secondary-fixed p-1 rounded">5 HIGH</div>
+<div class="bg-surface-container-high text-on-surface-variant p-1 rounded">7 MOD</div>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span>SOVEREIGN IMPACT</span>
+<span class="text-secondary-fixed font-medium">ISOLATED / ZERO BREACH</span>
+</div>
+</div>
+<!-- Card 3: Cyber Activity -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-tactical text-label-tactical uppercase tracking-wider text-outline">BANDWIDTH TELEMETRY</span>
+<span class="font-data-mono-sm text-data-mono-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span> 99.84% SCRUB
+        </span>
+</div>
+<div>
+<span class="font-label-tactical text-label-tactical uppercase text-on-surface-variant">PEAK SURGE INGRESS</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary font-semibold tracking-tight">8.42</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Tbps</span>
+</div>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant mt-space-xs">
+<span>INGRESS FILTERED:</span>
+<span class="text-on-surface font-medium">247,192 PKT/S</span>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span>CROSS-STRAIT VECTOR</span>
+<span class="text-tertiary font-medium">ELEVATED VOLUME</span>
+</div>
+</div>
+<!-- Card 4: Intelligence Events -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between pb-space-xs mb-space-xs">
+<span class="font-label-tactical text-label-tactical uppercase tracking-wider text-outline">SENSORY RECON</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+</div>
+<div>
+<span class="font-label-tactical text-label-tactical uppercase text-on-surface-variant">INGESTED SIGNALS</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">1,428</span>
+<span class="font-headline-sm text-headline-sm text-outline">EVTS</span>
+</div>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant mt-space-xs">
+<span>AIR-GAP NODES:</span>
+<span class="text-secondary-fixed font-medium">38 / 38 VERIFIED</span>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span>SYNCHRONIZATION</span>
+<span class="text-on-surface font-medium">10 SECONDS AGO</span>
+</div>
+</div>
+</div>
+<!-- CENTERPIECE: NUSANTARA SITUATIONAL MAP -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<!-- Map Header Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm z-10">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">satellite_alt</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase font-semibold">
+            NUSANTARA SITUATIONAL MAP
+          </h2>
+</div>
+<p class="font-data-mono-sm text-data-mono-sm text-outline">
+          Archipelagic Cyber Domain &amp; Critical Subsea Infrastructure Telemetry [Bounds: 6°N – 11°S // 95°E – 141°E]
+        </p>
+</div>
+<!-- Tactical Badges -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high rounded text-primary font-label-tactical text-label-tactical">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          PALAPA RING: DUAL POLARITY ACTIVE
+        </div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high rounded text-secondary-fixed font-label-tactical text-label-tactical">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+          SATRIA-1 MESH LOCK
+        </div>
+</div>
+</div>
+<!-- SVG Tactical Map Canvas with Overlays -->
+<div class="relative w-full h-[460px] bg-surface-container-low rounded overflow-hidden flex items-center justify-center select-none">
+<!-- Coordinate Reticles & Grid -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="60" id="tacticalGrid" patternunits="userSpaceOnUse" width="60">
+<path d="M 60 0 L 0 0 0 60" fill="none" stroke="#4fdbc8" stroke-dasharray="2,4" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#tacticalGrid)" height="100%" width="100%"></rect>
+<!-- Crosshairs -->
+<circle cx="20%" cy="40%" fill="none" r="20" stroke="#4fdbc8" stroke-width="0.5"></circle>
+<circle cx="50%" cy="50%" fill="none" r="30" stroke="#4fdbc8" stroke-width="0.5"></circle>
+<circle cx="80%" cy="60%" fill="none" r="20" stroke="#4fdbc8" stroke-width="0.5"></circle>
+</svg>
+<!-- Tactical Archipelagic SVG Map Graphic -->
+<svg class="w-full h-full p-6 text-primary" fill="none" viewbox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Glow Filters -->
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<filter height="140%" id="pulseRed" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Subsea Fiber Backbone Paths (Palapa Ring) -->
+<!-- West to East Subsea spine -->
+<path class="opacity-60" d="M 120 180 L 220 220 L 280 290 L 370 340 L 460 350 L 580 330 L 740 320 L 890 270" stroke="#14b8a6" stroke-dasharray="4,3" stroke-width="1.5"></path>
+<!-- Northern Arch Spine (Batam -> Natuna -> IKN -> Manado) -->
+<path class="opacity-50" d="M 220 220 L 320 160 L 510 220 L 630 180 L 750 220 L 890 270" stroke="#4cd7f6" stroke-dasharray="3,3" stroke-width="1.2"></path>
+<!-- Connector IKN to Java & Makassar -->
+<path class="opacity-40" d="M 510 220 L 370 340 M 510 220 L 580 330" stroke="#14b8a6" stroke-dasharray="2,2" stroke-width="1"></path>
+<!-- Stylized Island Silhouettes (Indonesian Archipelago) -->
+<!-- Sumatera -->
+<path d="M 100 130 Q 130 180 180 230 Q 230 280 270 330 Q 250 340 220 310 Q 170 250 110 190 Q 90 150 100 130 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1.2"></path>
+<path d="M 130 170 Q 160 210 210 260" fill="none" stroke="#252b2c" stroke-width="0.8"></path>
+<!-- Jawa -->
+<path d="M 270 345 Q 330 345 380 350 Q 430 355 490 355 Q 490 365 440 365 Q 350 365 270 355 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1.2"></path>
+<!-- Kalimantan (Borneo) -->
+<path d="M 370 180 Q 430 150 490 170 Q 530 200 520 260 Q 490 280 430 285 Q 370 270 360 220 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1.2"></path>
+<!-- Natuna Group Marker -->
+<circle cx="325" cy="145" fill="#4cd7f6" r="3"></circle>
+<text fill="#859490" font-family="JetBrains Mono" font-size="9" x="332" y="148">NATUNA ARCH</text>
+<!-- Sulawesi -->
+<path d="M 550 200 Q 580 180 630 185 Q 610 220 580 235 Q 610 260 610 300 Q 590 320 570 310 Q 560 270 560 240 Q 540 220 550 200 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1.2"></path>
+<!-- Bali / Nusa Tenggara -->
+<path d="M 505 358 Q 540 358 580 355 Q 620 355 670 360 Q 640 368 560 368 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1"></path>
+<!-- Maluku Group -->
+<path d="M 680 210 Q 710 210 720 250 Q 690 270 680 240 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1"></path>
+<path d="M 700 280 Q 730 290 710 330 Q 690 320 700 280 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1"></path>
+<!-- Papua -->
+<path d="M 760 250 Q 800 210 830 240 Q 890 240 930 270 Q 930 330 880 340 Q 830 320 800 300 Q 770 290 760 250 Z" fill="#1b2122" stroke="#3c4947" stroke-width="1.2"></path>
+<!-- Tactical Defense Hubs (Nodes) -->
+<!-- Node 1: JAKARTA -->
+<g class="cursor-pointer group" transform="translate(300, 345)">
+<circle class="animate-ping" cx="0" cy="0" fill="#14b8a6" fill-opacity="0.2" r="10"></circle>
+<circle cx="0" cy="0" fill="#4fdbc8" r="4.5"></circle>
+<line stroke="#4fdbc8" stroke-width="1" x1="0" x2="-25" y1="0" y2="-35"></line>
+<rect fill="#090f10" height="20" rx="2" width="80" x="-105" y="-55"></rect>
+<text fill="#dee3e4" font-family="JetBrains Mono" font-size="9" font-weight="600" x="-100" y="-41">JAKARTA [HQ]</text>
+</g>
+<!-- Node 2: IKN NUSANTARA -->
+<g class="cursor-pointer group" transform="translate(505, 230)">
+<circle class="animate-pulse" cx="0" cy="0" fill="#4cd7f6" fill-opacity="0.18" r="16"></circle>
+<circle cx="0" cy="0" fill="#4cd7f6" filter="url(#glow)" r="6"></circle>
+<circle cx="0" cy="0" fill="#001f26" r="2.5"></circle>
+<line stroke="#4cd7f6" stroke-width="1.2" x1="0" x2="25" y1="0" y2="-35"></line>
+<rect fill="#090f10" height="26" rx="2" width="130" x="25" y="-55"></rect>
+<text fill="#4cd7f6" font-family="Space Grotesk" font-size="10" font-weight="600" x="32" y="-42">IKN CORE SHIELD</text>
+<text fill="#859490" font-family="JetBrains Mono" font-size="8" x="32" y="-32">SPINE VECTOR • 1.1ms</text>
+</g>
+<!-- Node 3: BATAM -->
+<g class="cursor-pointer" transform="translate(225, 218)">
+<circle class="animate-ping" cx="0" cy="0" fill="#ffb4ab" fill-opacity="0.3" r="9"></circle>
+<circle cx="0" cy="0" fill="#ffb4ab" filter="url(#pulseRed)" r="4"></circle>
+<line stroke="#ffb4ab" stroke-width="1" x1="0" x2="-20" y1="0" y2="-25"></line>
+<rect fill="#090f10" height="22" rx="2" width="90" x="-110" y="-45"></rect>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="600" x="-105" y="-34">BATAM GATEWAY</text>
+<text fill="#dee3e4" font-family="JetBrains Mono" font-size="8" x="-105" y="-25">SCRUBBING ENGAGED</text>
+</g>
+<!-- Node 4: SURABAYA -->
+<g class="cursor-pointer" transform="translate(390, 355)">
+<circle cx="0" cy="0" fill="#adceb8" r="3.5"></circle>
+<line stroke="#adceb8" stroke-width="0.8" x1="0" x2="15" y1="0" y2="25"></line>
+<rect fill="#090f10" height="18" rx="2" width="85" x="15" y="25"></rect>
+<text fill="#dee3e4" font-family="JetBrains Mono" font-size="8.5" x="20" y="38">SURABAYA SOC</text>
+</g>
+<!-- Node 5: MAKASSAR -->
+<g class="cursor-pointer" transform="translate(580, 320)">
+<circle cx="0" cy="0" fill="#4fdbc8" r="4"></circle>
+<line stroke="#4fdbc8" stroke-width="0.8" x1="0" x2="20" y1="0" y2="20"></line>
+<rect fill="#090f10" height="18" rx="2" width="85" x="20" y="20"></rect>
+<text fill="#dee3e4" font-family="JetBrains Mono" font-size="8.5" x="25" y="32">MAKASSAR HUB</text>
+</g>
+<!-- Node 6: JAYAPURA -->
+<g class="cursor-pointer" transform="translate(915, 275)">
+<circle cx="0" cy="0" fill="#adceb8" r="4"></circle>
+<line stroke="#adceb8" stroke-width="0.8" x1="0" x2="-25" y1="0" y2="-25"></line>
+<rect fill="#090f10" height="20" rx="2" width="90" x="-115" y="-45"></rect>
+<text fill="#dee3e4" font-family="JetBrains Mono" font-size="8.5" x="-110" y="-32">JAYAPURA BORDER</text>
+</g>
+<!-- Dynamic Intercept Ping Packet across Palapa Ring -->
+<circle cx="280" cy="290" fill="#4cd7f6" r="2.5">
+<animate attributename="cx" dur="4s" repeatcount="indefinite" values="220;370;510"></animate>
+<animate attributename="cy" dur="4s" repeatcount="indefinite" values="220;340;220"></animate>
+<animate attributename="opacity" dur="4s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+</svg>
+<!-- FLOATING HUD TELEMETRY CAPSULE (Right Overlay) -->
+<div class="absolute bottom-4 right-4 w-72 bg-surface-container-lowest/90 backdrop-blur-md p-space-sm rounded shadow-xl flex flex-col gap-space-xs z-20">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-tactical text-label-tactical text-primary uppercase font-bold">SECTOR INSPECTION: IKN SECTOR 01</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="grid grid-cols-2 gap-x-2 gap-y-1 font-data-mono-sm text-data-mono-sm">
+<span class="text-outline">THREAT LEVEL:</span>
+<span class="text-primary font-medium text-right">LOW RISK / NOMINAL</span>
+<span class="text-outline">INTERCEPTS:</span>
+<span class="text-on-surface font-medium text-right">4 / 0 BREACHES</span>
+<span class="text-outline">CIPHER SUITE:</span>
+<span class="text-secondary-fixed text-right">KYBER-1024 (PQC)</span>
+<span class="text-outline">SAT-LINK:</span>
+<span class="text-on-surface text-right">LAPAN-A3 SYNCD</span>
+</div>
+<div class="mt-1 pt-1 flex items-center justify-between text-label-tactical font-label-tactical text-outline">
+<span>COORDINATES</span>
+<span class="text-on-surface-variant font-data-mono-sm">0°47'S, 116°49'E</span>
+</div>
+</div>
+<!-- Left Bottom Compass Reticle -->
+<div class="absolute bottom-4 left-4 font-data-mono-sm text-data-mono-sm text-outline flex items-center gap-space-sm bg-surface-container-lowest/70 backdrop-blur-sm px-space-sm py-space-xs rounded">
+<span>GRID: WGS-84</span>
+<span class="text-primary">SEC: INDO-PACOM-N4</span>
+<span>POLAR: GEO-SYNC</span>
+</div>
+</div>
+</div>
+<!-- 2-COLUMN SPLIT GRID: ANALYTICAL VISUALIZATION & ACTIVE INCIDENTS -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (lg:col-span-6): Cyber Activity Chart -->
+<div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-1 pb-space-sm mb-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">monitoring</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold">
+              CYBER ACTIVITY (24-HOUR ANALYTICAL TREND)
+            </h3>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-primary bg-surface-container-high px-space-xs py-0.5 rounded">
+            +18.4% vs BASELINE
+          </span>
+</div>
+<p class="font-data-mono-sm text-data-mono-sm text-outline">
+          Throughput Ingress (Tbps) vs Scrubbed Anomaly Packets [00:00 – 23:00 WIB]
+        </p>
+</div>
+<!-- Telemetry Graphic: 24h Bar/Curve Visualization -->
+<div class="w-full flex flex-col gap-space-xs">
+<div class="flex items-end justify-between h-44 px-2 pt-4 bg-surface-container-lowest rounded relative">
+<!-- Baseline Guide Line at 4 Tbps -->
+<div class="absolute left-0 right-0 top-1/2 -translate-y-1/2 opacity-30 flex items-center">
+<div class="w-full h-px bg-outline"></div>
+<span class="font-data-mono-sm text-[9px] text-outline px-1">4.0 Tbps (Mean)</span>
+</div>
+<!-- Peak Marker at 03:15 WIB -->
+<div class="absolute left-[16%] top-2 flex flex-col items-center">
+<span class="font-data-mono-sm text-[9px] text-error font-semibold bg-error-container/40 px-1 rounded">
+              PEAK: 8.42 Tbps
+            </span>
+<span class="w-1 h-3 bg-error mt-0.5"></span>
+</div>
+<!-- Synthetic Hourly Bars representing traffic load -->
+<!-- 00h --> <div class="w-[3%] bg-primary/40 h-[38%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 01h --> <div class="w-[3%] bg-primary/50 h-[45%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 02h --> <div class="w-[3%] bg-primary/70 h-[62%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 03h PEAK --> <div class="w-[3%] bg-error h-[96%] rounded-t-sm shadow-sm hover:bg-error transition-all"></div>
+<!-- 04h --> <div class="w-[3%] bg-primary/80 h-[74%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 05h --> <div class="w-[3%] bg-primary/60 h-[52%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 06h --> <div class="w-[3%] bg-primary/40 h-[42%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 07h --> <div class="w-[3%] bg-primary/30 h-[35%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 08h --> <div class="w-[3%] bg-primary/40 h-[40%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 09h --> <div class="w-[3%] bg-primary/50 h-[50%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 10h --> <div class="w-[3%] bg-primary/60 h-[58%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 11h --> <div class="w-[3%] bg-primary/50 h-[48%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 12h --> <div class="w-[3%] bg-primary/40 h-[42%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 13h --> <div class="w-[3%] bg-primary/50 h-[54%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 14h --> <div class="w-[3%] bg-primary/70 h-[68%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 15h --> <div class="w-[3%] bg-primary/60 h-[60%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 16h --> <div class="w-[3%] bg-primary/50 h-[52%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 17h --> <div class="w-[3%] bg-primary/40 h-[45%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 18h --> <div class="w-[3%] bg-primary/60 h-[58%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 19h --> <div class="w-[3%] bg-primary/70 h-[69%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 20h --> <div class="w-[3%] bg-primary/80 h-[78%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 21h --> <div class="w-[3%] bg-primary/70 h-[65%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 22h --> <div class="w-[3%] bg-primary/50 h-[50%] rounded-t-sm hover:bg-primary transition-all"></div>
+<!-- 23h Current --> <div class="w-[3%] bg-primary h-[48%] rounded-t-sm shadow-sm hover:bg-primary transition-all"></div>
+</div>
+<!-- Time Legend -->
+<div class="flex justify-between font-data-mono-sm text-[10px] text-outline px-1">
+<span>00:00</span>
+<span>04:00</span>
+<span>08:00</span>
+<span>12:00</span>
+<span>16:00</span>
+<span>20:00</span>
+<span class="text-primary font-semibold">NOW (23:00)</span>
+</div>
+</div>
+<!-- Data Snapshot Footer -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md mt-space-sm">
+<div class="flex flex-col bg-surface-container p-space-sm rounded">
+<span class="font-label-tactical text-label-tactical text-outline">CURRENT LOAD</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">4.12 Tbps</span>
+<span class="font-data-mono-sm text-data-mono-sm text-secondary-fixed">NOMINAL</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded">
+<span class="font-label-tactical text-label-tactical text-outline">SCRUB EFFICIENCY</span>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">99.98%</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">0.02% LATENCY DRIFT</span>
+</div>
+<div class="flex flex-col bg-surface-container p-space-sm rounded">
+<span class="font-label-tactical text-label-tactical text-outline">FILTER ENGINE</span>
+<span class="font-headline-sm text-headline-sm text-secondary-fixed font-semibold">BSSN-AI</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">SOVEREIGN ML v4.2</span>
+</div>
+</div>
+</div>
+<!-- Right Column (lg:col-span-6): Active Incidents Table/Cards -->
+<div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-lg">warning</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold">
+              ACTIVE INCIDENTS
+            </h3>
+</div>
+<p class="font-data-mono-sm text-data-mono-sm text-outline">
+            National Critical Infrastructure Priority Queue
+          </p>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface bg-surface-container-high px-space-sm py-1 rounded">
+          4 ACTIONABLE
+        </span>
+</div>
+<!-- Incident Rows -->
+<div class="flex flex-col gap-space-xs">
+<!-- Incident 1 -->
+<div class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded transition-all flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-semibold">[INC-2025-0841]</span>
+<span class="px-1.5 py-0.5 bg-error-container/40 text-error font-label-tactical text-label-tactical font-bold rounded">
+                CRITICAL
+              </span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">03:42 WIB</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium">
+            SCADA Substation Grid Interconnector Surge
+          </div>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>REGION: Jawa-Madura-Bali</span>
+<span class="text-secondary-fixed bg-secondary-container/40 px-1.5 py-0.5 rounded font-label-tactical text-label-tactical">
+              CONTAINED • BYPASS ENGAGED
+            </span>
+</div>
+</div>
+<!-- Incident 2 -->
+<div class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded transition-all flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-semibold">[INC-2025-0839]</span>
+<span class="px-1.5 py-0.5 bg-secondary-container/60 text-secondary-fixed font-label-tactical text-label-tactical font-bold rounded">
+                HIGH
+              </span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">02:18 WIB</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium">
+            Core Banking DNS Poisoning Reconnaissance
+          </div>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>REGION: DKI Jakarta Financial Zone</span>
+<span class="text-primary bg-primary-container/20 px-1.5 py-0.5 rounded font-label-tactical text-label-tactical">
+              MITIGATING • DNSSEC VALIDATED
+            </span>
+</div>
+</div>
+<!-- Incident 3 -->
+<div class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded transition-all flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-semibold">[INC-2025-0835]</span>
+<span class="px-1.5 py-0.5 bg-surface-container-highest text-on-surface-variant font-label-tactical text-label-tactical font-bold rounded">
+                MODERATE
+              </span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">01:05 WIB</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium">
+            Subsea Cable Repeater #04 Port Probing
+          </div>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>REGION: Selat Makassar Deep Corridor</span>
+<span class="text-on-surface bg-surface-container-high px-1.5 py-0.5 rounded font-label-tactical text-label-tactical">
+              LOGGED • MONITORING
+            </span>
+</div>
+</div>
+<!-- Incident 4 -->
+<div class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded transition-all flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-semibold">[INC-2025-0828]</span>
+<span class="px-1.5 py-0.5 bg-secondary-container/60 text-secondary-fixed font-label-tactical text-label-tactical font-bold rounded">
+                HIGH
+              </span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">23:50 WIB</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface font-medium">
+            Maritime Port Logistics Terminal Ransomware Beacon
+          </div>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>REGION: Tanjung Perak Hub, Surabaya</span>
+<span class="text-secondary-fixed bg-secondary-container/40 px-1.5 py-0.5 rounded font-label-tactical text-label-tactical">
+              AIR-GAPPED • CLEAN RESTORE
+            </span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> ALL CSIRT TEAMS SYNCHRONIZED
+        </span>
+<a class="text-primary hover:underline uppercase" href="#">OPEN CSIRT TRIAGE DASHBOARD →</a>
+</div>
+</div>
+</div>
+<!-- 2-COLUMN SPLIT GRID: LIVE INTELLIGENCE FEED & REGIONAL SECURITY STATUS -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column (lg:col-span-6): Live Intelligence Stream -->
+<div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">rss_feed</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold">
+            LIVE INTELLIGENCE FEED
+          </h3>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> INGESTING
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Feed Item 1 -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-medium">03:42:19 WIB</span>
+<span class="px-1.5 py-0.5 bg-error-container/40 text-error font-label-tactical text-label-tactical font-semibold rounded">
+              HIGH
+            </span>
+</div>
+<div class="font-label-tactical text-label-tactical text-on-surface uppercase font-semibold">
+            CYBER THREAT // SECTOR-NATUNA
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Automated firewall isolation engaged. Hostile high-frequency SYN scans repelled on naval radar telemetry gateway.
+          </p>
+</div>
+<!-- Feed Item 2 -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-medium">03:31:05 WIB</span>
+<span class="px-1.5 py-0.5 bg-surface-container-highest text-secondary-fixed font-label-tactical text-label-tactical font-semibold rounded">
+              MODERATE
+            </span>
+</div>
+<div class="font-label-tactical text-label-tactical text-on-surface uppercase font-semibold">
+            OSINT // SECTOR-IKN
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            APT beacon probe targeting Sepaku Smart Water Grid telemetry neutralized before lateral ingress achieved.
+          </p>
+</div>
+<!-- Feed Item 3 -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-medium">03:15:40 WIB</span>
+<span class="px-1.5 py-0.5 bg-error-container/40 text-error font-label-tactical text-label-tactical font-semibold rounded">
+              HIGH
+            </span>
+</div>
+<div class="font-label-tactical text-label-tactical text-on-surface uppercase font-semibold">
+            NETWORK EVENT // SECTOR-SURABAYA
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ransomware binary quarantine executed at Tanjung Perak container hub. Zero disruption to sovereign logistics.
+          </p>
+</div>
+<!-- Feed Item 4 -->
+<div class="p-space-sm bg-surface-container rounded flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-medium">02:50:12 WIB</span>
+<span class="px-1.5 py-0.5 bg-primary-container/20 text-primary font-label-tactical text-label-tactical font-semibold rounded">
+              ADVISORY
+            </span>
+</div>
+<div class="font-label-tactical text-label-tactical text-on-surface uppercase font-semibold">
+            VULNERABILITY // NATIONAL REGISTRY
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero-day CVE cryptographic patch pushed to all BSSN sovereign gateway border routers under UU No. 27/2022.
+          </p>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span>ENCRYPTION VERIFIED: SHA3-512</span>
+<span class="text-on-surface-variant">STREAM BUFFER: 4,096 SLOTS</span>
+</div>
+</div>
+<!-- Right Column (lg:col-span-6): Regional Security Status -->
+<div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">security</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold">
+            REGIONAL SECURITY STATUS
+          </h3>
+</div>
+<span class="font-label-tactical text-label-tactical text-secondary-fixed bg-secondary-container/40 px-space-xs py-0.5 rounded uppercase">
+          5 THEATER COMMANDS
+        </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Sumatera -->
+<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">SUMATERA THEATER</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">TRAFFIC: 1.2 Tbps • 2 INCIDENTS</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-tactical text-label-tactical text-secondary-fixed uppercase font-semibold">NOMINAL</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">1m ago</span>
+</div>
+</div>
+<!-- Jawa & Bali -->
+<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">JAWA &amp; BALI COMMAND</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">TRAFFIC: 4.8 Tbps • 6 INCIDENTS</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-tactical text-label-tactical text-error uppercase font-semibold">ELEVATED MITIGATION</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">Just now</span>
+</div>
+</div>
+<!-- Kalimantan & IKN Hub -->
+<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">KALIMANTAN &amp; IKN HUB</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">TRAFFIC: 1.4 Tbps • 1 INCIDENT</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-tactical text-label-tactical text-primary uppercase font-semibold">STRATEGIC SHIELD</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">3m ago</span>
+</div>
+</div>
+<!-- Sulawesi Logistics -->
+<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">SULAWESI LOGISTICS</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">TRAFFIC: 0.6 Tbps • 3 INCIDENTS</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-tactical text-label-tactical text-secondary-fixed uppercase font-semibold">NOMINAL</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">8m ago</span>
+</div>
+</div>
+<!-- Maluku & Papua Border -->
+<div class="p-space-sm bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">MALUKU &amp; PAPUA BORDER</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">TRAFFIC: 0.4 Tbps • 2 INCIDENTS</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-tactical text-label-tactical text-secondary-fixed uppercase font-semibold">PATROL MESH</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">5m ago</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs mt-space-xs flex items-center justify-between font-label-tactical text-label-tactical text-outline">
+<span>SOVEREIGN AIR-GAP COVERAGE: 100%</span>
+<span class="text-primary font-medium">ALL NODES ONLINE</span>
+</div>
+</div>
+</div>
+<!-- BOTTOM GRID: 6 TACTICAL INTELLIGENCE CAPABILITIES -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">view_quilt</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase font-semibold">
+          TACTICAL CAPABILITIES • OPERATIONAL SUITE
+        </h3>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">
+        DIRECT OPERATIONAL READINESS // KEMHAN-BSSN-TNI
+      </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Module 1 -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">radar</span>
+<span class="font-label-tactical text-label-tactical text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">MOD-01</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold mb-1">
+            CYBER THREAT INTELLIGENCE
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Continuous deep &amp; dark web reconnaissance, nation-state actor attribution (APT-41, Lazarus, Sandworm), and zero-second CVE vector correlation.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-data-mono-sm text-data-mono-sm text-outline">
+<span>READINESS: OPTIMAL</span>
+<span class="text-primary font-semibold">ACTIVE RECON</span>
+</div>
+</div>
+<!-- Module 2 -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">neurology</span>
+<span class="font-label-tactical text-label-tactical text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">MOD-02</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold mb-1">
+            OSINT OPERATIONS &amp; SYNTHESIS
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-velocity open-source ingestion, cognitive narrative tracking across Indo-Pacific channels, and sovereign Bahasa Indonesia LLM semantic analysis.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-data-mono-sm text-data-mono-sm text-outline">
+<span>PIPELINE: 12.8M POSTS/HR</span>
+<span class="text-secondary-fixed font-semibold">SYNTHESIZING</span>
+</div>
+</div>
+<!-- Module 3 -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<span class="font-label-tactical text-label-tactical text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">MOD-03</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold mb-1">
+            NETWORK MONITORING &amp; IIV
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Hardened SCADA protection of national electrical grids (PLN), strategic maritime container port controls (Pelindo), and municipal water reservoirs.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-data-mono-sm text-data-mono-sm text-outline">
+<span>CRITICAL ASSETS: 412</span>
+<span class="text-secondary-fixed font-semibold">100% GUARDED</span>
+</div>
+</div>
+<!-- Module 4 -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">emergency</span>
+<span class="font-label-tactical text-label-tactical text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">MOD-04</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold mb-1">
+            INCIDENT RESPONSE &amp; CSIRT
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Autonomous military CSIRT dispatch, real-time kinetic lateral containment, packet scrubbing bypass, and sub-second adversary neutralization.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-data-mono-sm text-data-mono-sm text-outline">
+<span>MOBILIZATION: 90 SEC</span>
+<span class="text-primary font-semibold">STANDBY ON-CALL</span>
+</div>
+</div>
+<!-- Module 5 -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">fingerprint</span>
+<span class="font-label-tactical text-label-tactical text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">MOD-05</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold mb-1">
+            DIGITAL FORENSICS LAB
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero-delay binary disassembly, volatile RAM snapshot extraction, encrypted evidence vaulting, and sovereign cryptographic chain-of-custody.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-data-mono-sm text-data-mono-sm text-outline">
+<span>AIR-GAP VAULT: SECURE</span>
+<span class="text-secondary-fixed font-semibold">CHAIN-OF-CUSTODY</span>
+</div>
+</div>
+<!-- Module 6 -->
+<div class="bg-surface-container-low p-space-md rounded shadow-md flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">menu_book</span>
+<span class="font-label-tactical text-label-tactical text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">MOD-06</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase font-semibold mb-1">
+            SOVEREIGN KMSN KNOWLEDGE BASE
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Katalog Mutu Siber Nasional registry, classified defense playbook repository, and statutory compliance framework under UU No. 27/2022 (PDP).
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-data-mono-sm text-data-mono-sm text-outline">
+<span>STANDARD: UU 27/2022</span>
+<span class="text-primary font-semibold">CERTIFIED SECURE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const refreshBtn = document.getElementById('refresh-btn');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', function() {
+        const icon = refreshBtn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.remove('animate-spin');
+          void icon.offsetWidth;
+          icon.classList.add('animate-spin');
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,117 @@
+<doctype html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paragraph {
+            color: red;
+            align-items: center;
+            text-align: justify;
+        }
+        .hi {
+            color: blue;
+            align-items: center;
+            text-align: center;
+        }
+        .h0 {
+            color: red;
+        }
+        .hi1 {
+            color: green;
+        }
+        .hi2 {
+            color: blue;
+        }
+        .hi3 {
+            color: purple;
+        }
+        .hi4 {
+            color: orange;
+        }
+        .hi5 {
+            color: pink;
+        }
+        .hi6 {
+            color: brown;
+        }
+        .pendaftaran {
+            color: black;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .kotak-utama {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .kotak-kiri, .kotak-tengah, .kotak-kanan {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+
+    </style>
+    </head>
+
+<body>
+
+    <h1 class ="paragraph">Hello <span class="hi">World</span></h1>
+
+    <p><span class="h0">TUGAS</span> <span class="hi1">NEGARA </span> <span class="hi2">MEMANGGILMU!</span> <span class="hi3">Ayo,</span> <span class="hi4">Daftarkan</span> <span class="hi5">Dirimu</span> <span class="hi6">Segera.</span>
+    </p>
+
+</body>
+<br>
+<br>
+<br>
+<div class="pendaftaran"> 
+    <h1>Jadwal Penerimaan Calon Prajurit TNI</h1>
+    <p>Klik salah satu tautan di bawah ini untuk mendaftar.</p>
+</div>
+
+<div class="kotak-utama">
+            <div class="kotak-kiri">
+                Taruna Akademi TNI
+            </div>
+
+            <div class="kotak-tengah">
+                PA PSDP PENERBANG TNI
+            </div>
+
+            <div class="kotak-kanan">
+                PA PK TNI REGULER GELOMBANG 1
+            </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+    <h2>Formulir Input Data Pendaftaran</h2>
+    
+    <!-- Tag form untuk membungkus data masukan -->
+    <form action="#" method="POST">
+        
+        <!-- Input Nama -->
+        <label for="nama">Nama Lengkap Pendaftar:</label><br>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama..." required><br><br>
+
+        <!-- Input Email -->
+        <label for="email">Alamat Email Pendaftar:</label><br>
+        <input type="email" id="email" name="email" placeholder="Masukkan email..." required><br><br>
+
+        <!-- Tombol Kirim -->
+        <button type="submit">Kirim Data</button>
+
+    </form>
+
+</html>
