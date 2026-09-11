@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SINDIKAT 4 — Group Profile</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#0F172A',
+              slate: '#1E293B',
+              muted: '#64748B',
+              border: '#E2E8F0',
+              surface: '#FFFFFF',
+              canvas: '#F8FAFC',
+              accent: '#2563EB',
+              accentCyan: '#0284C7',
+              accentLight: '#EFF6FF',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .photo-placeholder-gradient {
+      background: linear-gradient(135deg, #F8FAFC 0%, #EDF2F7 100%);
+    }
+    .hero-pattern {
+      background-image: radial-gradient(#CBD5E1 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-brand-canvas text-brand-slate font-sans antialiased selection:bg-brand-accent selection:text-white">
+<!-- ==================== NAVBAR ==================== -->
+<header class="sticky top-0 z-40 bg-brand-surface/90 backdrop-blur-md border-b border-brand-border">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Left: Brand -->
+<a class="flex items-center gap-3 group" href="#hero">
+<div class="w-10 h-10 rounded-xl bg-brand-charcoal text-white flex items-center justify-center font-bold font-mono text-sm tracking-wider shadow-sm group-hover:bg-brand-accent transition-colors">
+          S4
+        </div>
+<div class="flex flex-col">
+<span class="text-lg font-extrabold tracking-tight text-brand-charcoal leading-none">SINDIKAT 4</span>
+<span class="text-[11px] font-mono tracking-widest text-brand-muted uppercase mt-1">Group Profile</span>
+</div>
+</a>
+<!-- Center: Links -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
+<a class="hover:text-brand-charcoal transition-colors" href="#hero">Home</a>
+<a class="hover:text-brand-charcoal transition-colors font-semibold text-brand-charcoal" href="#members">Members</a>
+<a class="hover:text-brand-charcoal transition-colors" href="#about">About</a>
+</nav>
+<!-- Right: Badge -->
+<div class="flex items-center">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-border text-xs font-mono font-semibold text-brand-charcoal shadow-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>6 Members</span>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- ==================== HERO SECTION ==================== -->
+<section class="relative pt-12 pb-20 lg:pt-20 lg:pb-24 border-b border-brand-border hero-pattern overflow-hidden" id="hero">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column: Typography & Action -->
+<div class="lg:col-span-6 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 border border-blue-200/70 text-brand-accent font-mono text-xs font-semibold tracking-wider uppercase mb-5 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+              GROUP PROFILE
+            </div>
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-brand-charcoal tracking-tight leading-[1.08] mb-4">
+              SINDIKAT 4
+            </h1>
+<p class="text-xl sm:text-2xl text-slate-700 font-semibold tracking-tight mb-3">
+              Satu Kelompok, Enam Anggota
+            </p>
+<p class="text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed mb-8">
+              Profil singkat SINDIKAT 4 dan anggota di dalamnya.
+            </p>
+<div class="flex items-center gap-4">
+<a class="px-7 py-3.5 rounded-xl bg-brand-charcoal hover:bg-brand-accent text-white font-semibold text-sm transition-all shadow-sm flex items-center gap-2" href="#members">
+<span>View Members</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<a class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-brand-border text-slate-700 font-semibold text-sm transition-colors shadow-xs" href="#about">
+                About Group
+              </a>
+</div>
+</div>
+<!-- Right Column: Stylish 6-Member Grid Preview -->
+<div class="lg:col-span-6">
+<div class="p-4 sm:p-6 bg-white rounded-3xl border border-brand-border shadow-md">
+<div class="flex items-center justify-between mb-4 px-1">
+<span class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold">6 Members Roster</span>
+<span class="text-xs font-mono text-brand-accent font-medium">Click to Inspect</span>
+</div>
+<!-- 6 Hero Slots Grid (3 columns x 2 rows) -->
+<div class="grid grid-cols-3 gap-3 sm:gap-4">
+<!-- 01 Aufa -->
+<button class="group text-left relative rounded-2xl overflow-hidden border border-brand-border bg-slate-50 aspect-[3/4] flex flex-col justify-between p-3 transition-transform hover:-translate-y-1 hover:border-brand-accent" onclick="openMemberModal(1)">
+<div class="flex justify-between items-start">
+<span class="text-[11px] font-mono font-bold text-slate-400 group-hover:text-brand-accent">01</span>
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+</div>
+<div class="w-full flex-1 flex flex-col items-center justify-center my-1">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200/80 flex items-center justify-center text-slate-400 mb-1.5 group-hover:bg-blue-100 group-hover:text-brand-accent transition-colors">
+<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path></svg>
+</div>
+<span class="text-[10px] font-mono text-slate-400">[Photo]</span>
+</div>
+<div class="text-center border-t border-slate-200/60 pt-1.5">
+<p class="text-xs font-bold text-slate-800 truncate">Aufa</p>
+<p class="text-[10px] font-mono text-brand-accent truncate">Kasenat</p>
+</div>
+</button>
+<!-- 02 Faugi -->
+<button class="group text-left relative rounded-2xl overflow-hidden border border-brand-border bg-slate-50 aspect-[3/4] flex flex-col justify-between p-3 transition-transform hover:-translate-y-1 hover:border-brand-accent" onclick="openMemberModal(2)">
+<div class="flex justify-between items-start">
+<span class="text-[11px] font-mono font-bold text-slate-400 group-hover:text-brand-accent">02</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+</div>
+<div class="w-full flex-1 flex flex-col items-center justify-center my-1">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200/80 flex items-center justify-center text-slate-400 mb-1.5 group-hover:bg-blue-100 group-hover:text-brand-accent transition-colors">
+<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path></svg>
+</div>
+<span class="text-[10px] font-mono text-slate-400">[Photo]</span>
+</div>
+<div class="text-center border-t border-slate-200/60 pt-1.5">
+<p class="text-xs font-bold text-slate-800 truncate">Faugi</p>
+<p class="text-[10px] font-mono text-slate-500 truncate">Anggota Siber 8</p>
+</div>
+</button>
+<!-- 03 Samuel -->
+<button class="group text-left relative rounded-2xl overflow-hidden border border-brand-border bg-slate-50 aspect-[3/4] flex flex-col justify-between p-3 transition-transform hover:-translate-y-1 hover:border-brand-accent" onclick="openMemberModal(3)">
+<div class="flex justify-between items-start">
+<span class="text-[11px] font-mono font-bold text-slate-400 group-hover:text-brand-accent">03</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+</div>
+<div class="w-full flex-1 flex flex-col items-center justify-center my-1">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200/80 flex items-center justify-center text-slate-400 mb-1.5 group-hover:bg-blue-100 group-hover:text-brand-accent transition-colors">
+<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path></svg>
+</div>
+<span class="text-[10px] font-mono text-slate-400">[Photo]</span>
+</div>
+<div class="text-center border-t border-slate-200/60 pt-1.5">
+<p class="text-xs font-bold text-slate-800 truncate">Samuel</p>
+<p class="text-[10px] font-mono text-slate-500 truncate">Anggota Siber 8</p>
+</div>
+</button>
+<!-- 04 Fahreza -->
+<button class="group text-left relative rounded-2xl overflow-hidden border border-brand-border bg-slate-50 aspect-[3/4] flex flex-col justify-between p-3 transition-transform hover:-translate-y-1 hover:border-brand-accent" onclick="openMemberModal(4)">
+<div class="flex justify-between items-start">
+<span class="text-[11px] font-mono font-bold text-slate-400 group-hover:text-brand-accent">04</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+</div>
+<div class="w-full flex-1 flex flex-col items-center justify-center my-1">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200/80 flex items-center justify-center text-slate-400 mb-1.5 group-hover:bg-blue-100 group-hover:text-brand-accent transition-colors">
+<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path></svg>
+</div>
+<span class="text-[10px] font-mono text-slate-400">[Photo]</span>
+</div>
+<div class="text-center border-t border-slate-200/60 pt-1.5">
+<p class="text-xs font-bold text-slate-800 truncate">Fahreza</p>
+<p class="text-[10px] font-mono text-slate-500 truncate">Anggota Siber 8</p>
+</div>
+</button>
+<!-- 05 Jery -->
+<button class="group text-left relative rounded-2xl overflow-hidden border border-brand-border bg-slate-50 aspect-[3/4] flex flex-col justify-between p-3 transition-transform hover:-translate-y-1 hover:border-brand-accent" onclick="openMemberModal(5)">
+<div class="flex justify-between items-start">
+<span class="text-[11px] font-mono font-bold text-slate-400 group-hover:text-brand-accent">05</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+</div>
+<div class="w-full flex-1 flex flex-col items-center justify-center my-1">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200/80 flex items-center justify-center text-slate-400 mb-1.5 group-hover:bg-blue-100 group-hover:text-brand-accent transition-colors">
+<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path></svg>
+</div>
+<span class="text-[10px] font-mono text-slate-400">[Photo]</span>
+</div>
+<div class="text-center border-t border-slate-200/60 pt-1.5">
+<p class="text-xs font-bold text-slate-800 truncate">Jery</p>
+<p class="text-[10px] font-mono text-slate-500 truncate">Anggota Siber 8</p>
+</div>
+</button>
+<!-- 06 Hanafi -->
+<button class="group text-left relative rounded-2xl overflow-hidden border border-brand-border bg-slate-50 aspect-[3/4] flex flex-col justify-between p-3 transition-transform hover:-translate-y-1 hover:border-brand-accent" onclick="openMemberModal(6)">
+<div class="flex justify-between items-start">
+<span class="text-[11px] font-mono font-bold text-slate-400 group-hover:text-brand-accent">06</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+</div>
+<div class="w-full flex-1 flex flex-col items-center justify-center my-1">
+<div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200/80 flex items-center justify-center text-slate-400 mb-1.5 group-hover:bg-blue-100 group-hover:text-brand-accent transition-colors">
+<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path></svg>
+</div>
+<span class="text-[10px] font-mono text-slate-400">[Photo]</span>
+</div>
+<div class="text-center border-t border-slate-200/60 pt-1.5">
+<p class="text-xs font-bold text-slate-800 truncate">Hanafi</p>
+<p class="text-[10px] font-mono text-slate-500 truncate">Anggota Siber 8</p>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== ABOUT SINDIKAT 4 SECTION ==================== -->
+<section class="py-16 lg:py-20 border-b border-brand-border bg-white" id="about">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left: Narrative -->
+<div class="lg:col-span-8">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-accent block mb-2">ABOUT</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal tracking-tight mb-4">About SINDIKAT 4</h2>
+<p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+              [Deskripsi singkat kelompok akan ditambahkan kemudian.]
+            </p>
+</div>
+<!-- Right: Minimal Clean Info Card -->
+<div class="lg:col-span-4 bg-brand-canvas rounded-2xl border border-brand-border p-6 shadow-xs">
+<div class="space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-brand-border">
+<span class="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">GROUP</span>
+<span class="text-sm font-bold text-brand-charcoal font-mono">SINDIKAT 4</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">MEMBERS</span>
+<span class="text-lg font-bold text-brand-accent font-mono">06</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== OUR MEMBERS SECTION (MAIN VISUAL FOCUS) ==================== -->
+<section class="py-20 lg:py-28 border-b border-brand-border bg-brand-canvas" id="members">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">
+<div>
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-accent block mb-2">TEAM DIRECTORY</span>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-brand-charcoal tracking-tight">Our Members</h2>
+<p class="text-slate-500 text-base sm:text-lg mt-2">Enam anggota SINDIKAT 4</p>
+</div>
+<div class="inline-flex items-center gap-2 text-xs font-mono text-slate-500 bg-white px-3.5 py-2 rounded-xl border border-brand-border shadow-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>6 Real Members Registered</span>
+</div>
+</div>
+<!-- 3 columns x 2 rows cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+<!-- Card 1: Muhammad Aufa Firdausa Anwar -->
+<div class="group bg-white rounded-3xl border border-brand-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 flex flex-col">
+<!-- Photo Container (Aspect 4:5) -->
+<div class="relative w-full aspect-[4/5] bg-slate-100 overflow-hidden border-b border-brand-border flex items-center justify-center photo-placeholder-gradient">
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-block px-3 py-1 rounded-lg bg-brand-charcoal/85 backdrop-blur-sm text-white font-mono text-xs font-bold tracking-wider">
+                  MEMBER 01
+                </span>
+</div>
+<div class="absolute top-4 right-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-brand-accent">
+                  Kasenat
+                </span>
+</div>
+<!-- Placeholder Graphic -->
+<div class="flex flex-col items-center justify-center p-6 text-center transform transition-transform group-hover:scale-105 duration-300">
+<div class="w-20 h-20 rounded-2xl bg-white/90 shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:text-brand-accent transition-colors">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">[Foto: Aufa]</span>
+<span class="text-[11px] text-slate-400 mt-1">Aspect Ratio 4:5</span>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Nickname: <strong class="text-brand-charcoal">Aufa</strong></span>
+</div>
+<h3 class="text-xl font-bold text-brand-charcoal mb-2 leading-tight group-hover:text-brand-accent transition-colors">
+                  Muhammad Aufa Firdausa Anwar
+                </h3>
+<div class="mb-4">
+<span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 font-mono text-xs font-medium border border-slate-200">
+                    Kasenat
+                  </span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed italic bg-slate-50 p-3.5 rounded-xl border border-slate-100 mb-5">
+                  "[Profil singkat akan ditambahkan kemudian.]"
+                </p>
+</div>
+<div class="pt-3 border-t border-brand-border flex items-center justify-end">
+<button class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-charcoal text-slate-700 hover:text-white text-xs font-semibold tracking-wider font-mono transition-all flex items-center justify-center gap-2" onclick="openMemberModal(1)">
+<span>VIEW PROFILE</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Muhamad Faugi -->
+<div class="group bg-white rounded-3xl border border-brand-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 flex flex-col">
+<!-- Photo Container (Aspect 4:5) -->
+<div class="relative w-full aspect-[4/5] bg-slate-100 overflow-hidden border-b border-brand-border flex items-center justify-center photo-placeholder-gradient">
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-block px-3 py-1 rounded-lg bg-brand-charcoal/85 backdrop-blur-sm text-white font-mono text-xs font-bold tracking-wider">
+                  MEMBER 02
+                </span>
+</div>
+<div class="absolute top-4 right-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Anggota Siber 8
+                </span>
+</div>
+<!-- Placeholder Graphic -->
+<div class="flex flex-col items-center justify-center p-6 text-center transform transition-transform group-hover:scale-105 duration-300">
+<div class="w-20 h-20 rounded-2xl bg-white/90 shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:text-brand-accent transition-colors">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">[Foto: Faugi]</span>
+<span class="text-[11px] text-slate-400 mt-1">Aspect Ratio 4:5</span>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Nickname: <strong class="text-brand-charcoal">Faugi</strong></span>
+</div>
+<h3 class="text-xl font-bold text-brand-charcoal mb-2 leading-tight group-hover:text-brand-accent transition-colors">
+                  Muhamad Faugi
+                </h3>
+<div class="mb-4">
+<span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 font-mono text-xs font-medium border border-slate-200">
+                    Anggota Siber 8
+                  </span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed italic bg-slate-50 p-3.5 rounded-xl border border-slate-100 mb-5">
+                  "[Profil singkat akan ditambahkan kemudian.]"
+                </p>
+</div>
+<div class="pt-3 border-t border-brand-border flex items-center justify-end">
+<button class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-charcoal text-slate-700 hover:text-white text-xs font-semibold tracking-wider font-mono transition-all flex items-center justify-center gap-2" onclick="openMemberModal(2)">
+<span>VIEW PROFILE</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Samuel Prathio Rumy -->
+<div class="group bg-white rounded-3xl border border-brand-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 flex flex-col">
+<!-- Photo Container (Aspect 4:5) -->
+<div class="relative w-full aspect-[4/5] bg-slate-100 overflow-hidden border-b border-brand-border flex items-center justify-center photo-placeholder-gradient">
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-block px-3 py-1 rounded-lg bg-brand-charcoal/85 backdrop-blur-sm text-white font-mono text-xs font-bold tracking-wider">
+                  MEMBER 03
+                </span>
+</div>
+<div class="absolute top-4 right-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Anggota Siber 8
+                </span>
+</div>
+<!-- Placeholder Graphic -->
+<div class="flex flex-col items-center justify-center p-6 text-center transform transition-transform group-hover:scale-105 duration-300">
+<div class="w-20 h-20 rounded-2xl bg-white/90 shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:text-brand-accent transition-colors">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">[Foto: Samuel]</span>
+<span class="text-[11px] text-slate-400 mt-1">Aspect Ratio 4:5</span>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Nickname: <strong class="text-brand-charcoal">Samuel</strong></span>
+</div>
+<h3 class="text-xl font-bold text-brand-charcoal mb-2 leading-tight group-hover:text-brand-accent transition-colors">
+                  Samuel Prathio Rumy
+                </h3>
+<div class="mb-4">
+<span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 font-mono text-xs font-medium border border-slate-200">
+                    Anggota Siber 8
+                  </span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed italic bg-slate-50 p-3.5 rounded-xl border border-slate-100 mb-5">
+                  "[Profil singkat akan ditambahkan kemudian.]"
+                </p>
+</div>
+<div class="pt-3 border-t border-brand-border flex items-center justify-end">
+<button class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-charcoal text-slate-700 hover:text-white text-xs font-semibold tracking-wider font-mono transition-all flex items-center justify-center gap-2" onclick="openMemberModal(3)">
+<span>VIEW PROFILE</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Fahreza Muhammad Ghiffari -->
+<div class="group bg-white rounded-3xl border border-brand-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 flex flex-col">
+<!-- Photo Container (Aspect 4:5) -->
+<div class="relative w-full aspect-[4/5] bg-slate-100 overflow-hidden border-b border-brand-border flex items-center justify-center photo-placeholder-gradient">
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-block px-3 py-1 rounded-lg bg-brand-charcoal/85 backdrop-blur-sm text-white font-mono text-xs font-bold tracking-wider">
+                  MEMBER 04
+                </span>
+</div>
+<div class="absolute top-4 right-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Anggota Siber 8
+                </span>
+</div>
+<!-- Placeholder Graphic -->
+<div class="flex flex-col items-center justify-center p-6 text-center transform transition-transform group-hover:scale-105 duration-300">
+<div class="w-20 h-20 rounded-2xl bg-white/90 shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:text-brand-accent transition-colors">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">[Foto: Fahreza]</span>
+<span class="text-[11px] text-slate-400 mt-1">Aspect Ratio 4:5</span>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Nickname: <strong class="text-brand-charcoal">Fahreza</strong></span>
+</div>
+<h3 class="text-xl font-bold text-brand-charcoal mb-2 leading-tight group-hover:text-brand-accent transition-colors">
+                  Fahreza Muhammad Ghiffari
+                </h3>
+<div class="mb-4">
+<span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 font-mono text-xs font-medium border border-slate-200">
+                    Anggota Siber 8
+                  </span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed italic bg-slate-50 p-3.5 rounded-xl border border-slate-100 mb-5">
+                  "[Profil singkat akan ditambahkan kemudian.]"
+                </p>
+</div>
+<div class="pt-3 border-t border-brand-border flex items-center justify-end">
+<button class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-charcoal text-slate-700 hover:text-white text-xs font-semibold tracking-wider font-mono transition-all flex items-center justify-center gap-2" onclick="openMemberModal(4)">
+<span>VIEW PROFILE</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Jery Saputra -->
+<div class="group bg-white rounded-3xl border border-brand-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 flex flex-col">
+<!-- Photo Container (Aspect 4:5) -->
+<div class="relative w-full aspect-[4/5] bg-slate-100 overflow-hidden border-b border-brand-border flex items-center justify-center photo-placeholder-gradient">
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-block px-3 py-1 rounded-lg bg-brand-charcoal/85 backdrop-blur-sm text-white font-mono text-xs font-bold tracking-wider">
+                  MEMBER 05
+                </span>
+</div>
+<div class="absolute top-4 right-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Anggota Siber 8
+                </span>
+</div>
+<!-- Placeholder Graphic -->
+<div class="flex flex-col items-center justify-center p-6 text-center transform transition-transform group-hover:scale-105 duration-300">
+<div class="w-20 h-20 rounded-2xl bg-white/90 shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:text-brand-accent transition-colors">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">[Foto: Jery]</span>
+<span class="text-[11px] text-slate-400 mt-1">Aspect Ratio 4:5</span>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Nickname: <strong class="text-brand-charcoal">Jery</strong></span>
+</div>
+<h3 class="text-xl font-bold text-brand-charcoal mb-2 leading-tight group-hover:text-brand-accent transition-colors">
+                  Jery Saputra
+                </h3>
+<div class="mb-4">
+<span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 font-mono text-xs font-medium border border-slate-200">
+                    Anggota Siber 8
+                  </span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed italic bg-slate-50 p-3.5 rounded-xl border border-slate-100 mb-5">
+                  "[Profil singkat akan ditambahkan kemudian.]"
+                </p>
+</div>
+<div class="pt-3 border-t border-brand-border flex items-center justify-end">
+<button class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-charcoal text-slate-700 hover:text-white text-xs font-semibold tracking-wider font-mono transition-all flex items-center justify-center gap-2" onclick="openMemberModal(5)">
+<span>VIEW PROFILE</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Muhammad Hanafi -->
+<div class="group bg-white rounded-3xl border border-brand-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1.5 flex flex-col">
+<!-- Photo Container (Aspect 4:5) -->
+<div class="relative w-full aspect-[4/5] bg-slate-100 overflow-hidden border-b border-brand-border flex items-center justify-center photo-placeholder-gradient">
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-block px-3 py-1 rounded-lg bg-brand-charcoal/85 backdrop-blur-sm text-white font-mono text-xs font-bold tracking-wider">
+                  MEMBER 06
+                </span>
+</div>
+<div class="absolute top-4 right-4 z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
+                  Anggota Siber 8
+                </span>
+</div>
+<!-- Placeholder Graphic -->
+<div class="flex flex-col items-center justify-center p-6 text-center transform transition-transform group-hover:scale-105 duration-300">
+<div class="w-20 h-20 rounded-2xl bg-white/90 shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3 group-hover:text-brand-accent transition-colors">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">[Foto: Hanafi]</span>
+<span class="text-[11px] text-slate-400 mt-1">Aspect Ratio 4:5</span>
+</div>
+</div>
+<!-- Details -->
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Nickname: <strong class="text-brand-charcoal">Hanafi</strong></span>
+</div>
+<h3 class="text-xl font-bold text-brand-charcoal mb-2 leading-tight group-hover:text-brand-accent transition-colors">
+                  Muhammad Hanafi
+                </h3>
+<div class="mb-4">
+<span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 font-mono text-xs font-medium border border-slate-200">
+                    Anggota Siber 8
+                  </span>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed italic bg-slate-50 p-3.5 rounded-xl border border-slate-100 mb-5">
+                  "[Profil singkat akan ditambahkan kemudian.]"
+                </p>
+</div>
+<div class="pt-3 border-t border-brand-border flex items-center justify-end">
+<button class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-charcoal text-slate-700 hover:text-white text-xs font-semibold tracking-wider font-mono transition-all flex items-center justify-center gap-2" onclick="openMemberModal(6)">
+<span>VIEW PROFILE</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== GROUP PHOTO SECTION ==================== -->
+<section class="py-20 lg:py-24 border-b border-brand-border bg-white">
+<div class="max-w-5xl mx-auto px-6 lg:px-12 text-center">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-accent block mb-2">TOGETHER</span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal tracking-tight mb-8">Together</h2>
+<!-- Wide Landscape Container -->
+<div class="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-3xl bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center p-8 photo-placeholder-gradient shadow-inner">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white shadow-sm border border-slate-200 flex items-center justify-center text-slate-400 mb-3">
+<svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-base sm:text-lg font-mono font-bold text-slate-700 tracking-wider">[GROUP PHOTO]</span>
+<span class="text-xs text-slate-400 font-mono mt-1">Wide High-Resolution Landscape Frame</span>
+</div>
+<p class="text-sm font-mono text-slate-500 mt-4">[Foto bersama seluruh anggota SINDIKAT 4]</p>
+</div>
+</section>
+<!-- ==================== SIMPLE SUMMARY ==================== -->
+<section class="py-20 lg:py-24 bg-brand-charcoal text-white text-center">
+<div class="max-w-3xl mx-auto px-6 lg:px-12">
+<h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">SINDIKAT 4</h2>
+<div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-slate-800/90 border border-slate-700 mb-6 text-sm font-mono text-slate-300">
+<span class="font-bold text-white">6 Members</span>
+<span class="text-slate-500">•</span>
+<span>One Group Profile</span>
+</div>
+<p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Dedikasi, sinergi, dan integritas enam anggota dalam satu kesatuan profil resmi.
+        </p>
+</div>
+</section>
+</main>
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs font-mono">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded-lg bg-slate-800 text-white flex items-center justify-center font-bold text-[10px]">S4</span>
+<span class="font-bold text-white tracking-tight">SINDIKAT 4</span>
+</div>
+<div>
+<span>Group Profile</span>
+</div>
+</div>
+</footer>
+<!-- ==================== MEMBER PROFILE MODAL ==================== -->
+<div class="fixed inset-0 z-50 bg-brand-charcoal/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-opacity" id="member-modal">
+<div class="relative bg-white rounded-3xl max-w-2xl w-full border border-brand-border shadow-2xl overflow-hidden p-6 sm:p-8 flex flex-col">
+<!-- Close Button -->
+<button class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm transition-colors z-20" onclick="closeMemberModal()">
+        ✕
+      </button>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-6 sm:gap-8 items-center">
+<!-- Photo Container -->
+<div class="sm:col-span-5">
+<div class="w-full aspect-[4/5] rounded-2xl bg-slate-100 border border-slate-200 flex flex-col items-center justify-center photo-placeholder-gradient p-4 text-center">
+<div class="w-16 h-16 rounded-full bg-white shadow-xs border border-slate-200 flex items-center justify-center text-slate-400 mb-2">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-semibold text-slate-600" id="modal-photo-tag">[Foto Anggota]</span>
+<span class="text-[10px] text-slate-400 mt-0.5">Aspect 4:5</span>
+</div>
+</div>
+<!-- Info Column -->
+<div class="sm:col-span-7 flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 rounded-md bg-brand-charcoal text-white font-mono text-[11px] font-bold" id="modal-number">
+              MEMBER 01
+            </span>
+<span class="px-2.5 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-brand-accent font-mono text-xs font-semibold" id="modal-role-badge">
+              Role
+            </span>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-charcoal tracking-tight mb-1" id="modal-full-name">
+            Nama Lengkap
+          </h3>
+<p class="text-xs font-mono text-slate-500 mb-4">
+            Nickname: <span class="font-bold text-brand-charcoal" id="modal-nickname">Nickname</span>
+</p>
+<div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-sm text-slate-600 leading-relaxed italic">
+<p id="modal-bio">[Profil singkat akan ditambahkan kemudian.]</p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+<button class="px-5 py-2 text-xs font-semibold rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" onclick="closeMemberModal()">
+              Tutup
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== SCRIPT ==================== -->
+<script>
+    const members = {
+      1: {
+        num: "MEMBER 01",
+        fullName: "Muhammad Aufa Firdausa Anwar",
+        nickname: "Aufa",
+        role: "Kasenat",
+        photoTag: "[Foto: Aufa]",
+        bio: "[Profil singkat akan ditambahkan kemudian.]"
+      },
+      2: {
+        num: "MEMBER 02",
+        fullName: "Muhamad Faugi",
+        nickname: "Faugi",
+        role: "Anggota Siber 8",
+        photoTag: "[Foto: Faugi]",
+        bio: "[Profil singkat akan ditambahkan kemudian.]"
+      },
+      3: {
+        num: "MEMBER 03",
+        fullName: "Samuel Prathio Rumy",
+        nickname: "Samuel",
+        role: "Anggota Siber 8",
+        photoTag: "[Foto: Samuel]",
+        bio: "[Profil singkat akan ditambahkan kemudian.]"
+      },
+      4: {
+        num: "MEMBER 04",
+        fullName: "Fahreza Muhammad Ghiffari",
+        nickname: "Fahreza",
+        role: "Anggota Siber 8",
+        photoTag: "[Foto: Fahreza]",
+        bio: "[Profil singkat akan ditambahkan kemudian.]"
+      },
+      5: {
+        num: "MEMBER 05",
+        fullName: "Jery Saputra",
+        nickname: "Jery",
+        role: "Anggota Siber 8",
+        photoTag: "[Foto: Jery]",
+        bio: "[Profil singkat akan ditambahkan kemudian.]"
+      },
+      6: {
+        num: "MEMBER 06",
+        fullName: "Muhammad Hanafi",
+        nickname: "Hanafi",
+        role: "Anggota Siber 8",
+        photoTag: "[Foto: Hanafi]",
+        bio: "[Profil singkat akan ditambahkan kemudian.]"
+      }
+    };
+
+    function openMemberModal(id) {
+      const data = members[id];
+      if (!data) return;
+
+      document.getElementById('modal-number').innerText = data.num;
+      document.getElementById('modal-role-badge').innerText = data.role;
+      document.getElementById('modal-full-name').innerText = data.fullName;
+      document.getElementById('modal-nickname').innerText = data.nickname;
+      document.getElementById('modal-photo-tag').innerText = data.photoTag;
+      document.getElementById('modal-bio').innerText = data.bio;
+
+      const modal = document.getElementById('member-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeMemberModal() {
+      const modal = document.getElementById('member-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Modal close listeners
+    document.getElementById('member-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'member-modal') closeMemberModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMemberModal();
+    });
+  </script>
+</body></html>
